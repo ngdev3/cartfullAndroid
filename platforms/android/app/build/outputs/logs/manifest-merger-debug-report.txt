@@ -1,11 +1,11 @@
 -- Merging decision tree log ---
 manifest
-ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:2:1-26:12
+ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:2:1-26:12
 MERGED from [com.onesignal:OneSignal:3.10.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\OneSignal-3.10.1.aar\b3c019640507f487e25394afd8e77d51\AndroidManifest.xml:2:1-108:12
-MERGED from [:CordovaLib] J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:20:1-27:12
+MERGED from [:CordovaLib] J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:20:1-27:12
 MERGED from [com.google.firebase:firebase-messaging:12.0.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\firebase-messaging-12.0.1.aar\e98ae5fce18833e44529c64660ab0379\AndroidManifest.xml:17:1-37:12
 MERGED from [com.google.android.gms:play-services-location:12.0.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\play-services-location-12.0.1.aar\e2e3989d35a9861d7709b9a6bc39bc82\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-base:12.0.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\play-services-base-12.0.1.aar\9593e757881b89b55d4b714a514589f1\AndroidManifest.xml:17:1-29:12
@@ -31,41 +31,41 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Rajat\.gradle\
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\6ed66a9efdfc021dd8ec2b0534da4f25\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-12.0.1.aar\b877a88ba0fb2a3343646d9f43fce880\AndroidManifest.xml:17:1-24:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\14e3a41bae8437086b945b80d3d73c71\AndroidManifest.xml:17:1-22:12
-INJECTED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:2:1-26:12
 	package
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:2:102-130
-		INJECTED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml
-		INJECTED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:2:102-132
+		INJECTED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml
+		INJECTED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:2:74-101
-		INJECTED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml
-		INJECTED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:2:74-101
+		INJECTED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml
+		INJECTED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml
 	android:hardwareAccelerated
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:2:11-45
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:2:11-45
 	xmlns:android
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:2:131-189
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:2:133-191
 	android:versionCode
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:2:46-73
-		INJECTED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml
-		INJECTED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:2:46-73
+		INJECTED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml
+		INJECTED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml
 supports-screens
-ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:3:5-191
+ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:3:5-191
 	android:largeScreens
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:3:49-76
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:3:49-76
 	android:smallScreens
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:3:132-159
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:3:132-159
 	android:normalScreens
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:3:77-105
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:3:77-105
 	android:xlargeScreens
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:3:160-188
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:3:160-188
 	android:resizeable
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:3:106-131
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:3:106-131
 	android:anyDensity
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:3:23-48
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:3:23-48
 application
-ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:4:5-20:19
+ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:4:5-20:19
 MERGED from [com.onesignal:OneSignal:3.10.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\OneSignal-3.10.1.aar\b3c019640507f487e25394afd8e77d51\AndroidManifest.xml:49:5-106:19
 MERGED from [com.onesignal:OneSignal:3.10.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\OneSignal-3.10.1.aar\b3c019640507f487e25394afd8e77d51\AndroidManifest.xml:49:5-106:19
 MERGED from [com.google.firebase:firebase-messaging:12.0.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\firebase-messaging-12.0.1.aar\e98ae5fce18833e44529c64660ab0379\AndroidManifest.xml:22:5-35:19
@@ -97,82 +97,82 @@ MERGED from [com.google.firebase:firebase-common-license:12.0.1] C:\Users\Rajat\
 MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-12.0.1.aar\b877a88ba0fb2a3343646d9f43fce880\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-12.0.1.aar\b877a88ba0fb2a3343646d9f43fce880\AndroidManifest.xml:22:5-20
 	android:supportsRtl
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:4:114-140
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:4:114-140
 	android:label
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:4:81-113
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:4:81-113
 	android:hardwareAccelerated
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:4:18-52
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:4:18-52
 	android:icon
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:4:53-80
-activity#com.aamari.android.MainActivity
-ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:5:9-10:20
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:4:53-80
+activity#com.cartfull.android.MainActivity
+ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:5:9-10:20
 	android:screenOrientation
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:5:194-230
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:5:194-230
 	android:label
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:5:97-134
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:5:97-134
 	android:launchMode
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:5:135-165
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:5:135-165
 	android:windowSoftInputMode
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:5:294-336
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:5:294-336
 	android:configChanges
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:5:19-96
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:5:19-96
 	android:theme
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:5:231-293
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:5:231-293
 	android:name
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:5:166-193
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:5:166-193
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:6:13-9:29
+ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:6:13-9:29
 	android:label
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:6:28-65
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:6:28-65
 action#android.intent.action.MAIN
-ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:7:17-69
+ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:7:17-69
 	android:name
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:7:25-66
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:7:25-66
 category#android.intent.category.LAUNCHER
-ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:8:17-77
+ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:8:17-77
 	android:name
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:8:27-74
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:8:27-74
 amazon:enable-feature
-ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:11:9-159
+ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:11:9-159
 	xmlns:amazon
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:11:100-156
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:11:100-156
 	android:required
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:11:75-99
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:11:75-99
 	android:name
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:11:32-74
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:11:32-74
 service#com.onesignal.ADMMessageHandler
-ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:12:9-92
+ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:12:9-92
 	android:exported
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:12:18-42
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:12:18-42
 	android:name
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:12:43-89
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:12:43-89
 receiver#com.onesignal.ADMMessageHandler$Receiver
-ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:13:9-19:20
+ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:13:9-19:20
 	android:permission
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:13:75-139
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:13:75-139
 	android:name
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:13:19-74
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:13:19-74
 intent-filter#com.aamari.android+com.amazon.device.messaging.intent.RECEIVE+com.amazon.device.messaging.intent.REGISTRATION
-ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:14:13-18:29
+ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:14:13-18:29
 action#com.amazon.device.messaging.intent.REGISTRATION
-ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:15:17-90
+ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:15:17-90
 	android:name
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:15:25-87
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:15:25-87
 action#com.amazon.device.messaging.intent.RECEIVE
-ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:16:17-85
+ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:16:17-85
 	android:name
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:16:25-82
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:16:25-82
 category#com.aamari.android
-ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:17:17-63
+ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:17:17-63
 	android:name
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:17:27-60
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:17:27-60
 uses-sdk
-ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:21:5-74
-INJECTED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:21:5-74
+ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:21:5-74
+INJECTED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:21:5-74
 MERGED from [com.onesignal:OneSignal:3.10.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\OneSignal-3.10.1.aar\b3c019640507f487e25394afd8e77d51\AndroidManifest.xml:5:5-44
 MERGED from [com.onesignal:OneSignal:3.10.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\OneSignal-3.10.1.aar\b3c019640507f487e25394afd8e77d51\AndroidManifest.xml:5:5-44
-MERGED from [:CordovaLib] J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:25:5-44
-MERGED from [:CordovaLib] J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:25:5-44
+MERGED from [:CordovaLib] J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:25:5-44
+MERGED from [:CordovaLib] J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\CordovaLib\build\intermediates\manifests\full\debug\AndroidManifest.xml:25:5-44
 MERGED from [com.google.firebase:firebase-messaging:12.0.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\firebase-messaging-12.0.1.aar\e98ae5fce18833e44529c64660ab0379\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-messaging:12.0.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\firebase-messaging-12.0.1.aar\e98ae5fce18833e44529c64660ab0379\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-location:12.0.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\play-services-location-12.0.1.aar\e2e3989d35a9861d7709b9a6bc39bc82\AndroidManifest.xml:5:5-44
@@ -223,35 +223,35 @@ MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] C:\Users
 MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-12.0.1.aar\b877a88ba0fb2a3343646d9f43fce880\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\14e3a41bae8437086b945b80d3d73c71\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\14e3a41bae8437086b945b80d3d73c71\AndroidManifest.xml:20:5-44
-INJECTED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:21:5-74
+INJECTED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:21:5-74
 	android:targetSdkVersion
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:21:42-71
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:21:42-71
 	android:minSdkVersion
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:21:15-41
-		INJECTED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml
-		INJECTED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:21:15-41
+		INJECTED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml
+		INJECTED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:22:5-79
+ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:22:5-79
 MERGED from [com.onesignal:OneSignal:3.10.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\OneSignal-3.10.1.aar\b3c019640507f487e25394afd8e77d51\AndroidManifest.xml:25:5-79
 MERGED from [com.onesignal:OneSignal:3.10.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\OneSignal-3.10.1.aar\b3c019640507f487e25394afd8e77d51\AndroidManifest.xml:25:5-79
 MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\firebase-iid-12.0.1.aar\9ebde7978a0b4b8680676574f70a35c1\AndroidManifest.xml:22:5-79
 MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\firebase-iid-12.0.1.aar\9ebde7978a0b4b8680676574f70a35c1\AndroidManifest.xml:22:5-79
 	android:name
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:22:22-76
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:22:22-76
 uses-permission#com.amazon.device.messaging.permission.RECEIVE
-ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:23:5-86
+ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:23:5-86
 	android:name
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:23:22-83
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:23:22-83
 permission#com.aamari.android.permission.RECEIVE_ADM_MESSAGE
-ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:24:5-120
+ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:24:5-120
 	android:protectionLevel
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:24:82-117
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:24:82-117
 	android:name
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:24:17-81
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:24:17-81
 uses-permission#com.aamari.android.permission.RECEIVE_ADM_MESSAGE
-ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:25:5-89
+ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:25:5-89
 	android:name
-		ADDED from J:\xampp\htdocs\Projects2018\backup\AamariApp\platforms\android\app\src\main\AndroidManifest.xml:25:22-86
+		ADDED from J:\xampp\htdocs\Projects2018\backup\CartfullAppAndroid\platforms\android\app\src\main\AndroidManifest.xml:25:22-86
 permission#${applicationId}.permission.C2D_MESSAGE
 ADDED from [com.onesignal:OneSignal:3.10.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\OneSignal-3.10.1.aar\b3c019640507f487e25394afd8e77d51\AndroidManifest.xml:8:5-10:47
 MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\firebase-iid-12.0.1.aar\9ebde7978a0b4b8680676574f70a35c1\AndroidManifest.xml:28:5-30:47
@@ -260,7 +260,7 @@ MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\Rajat\.gradle\cac
 		ADDED from [com.onesignal:OneSignal:3.10.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\OneSignal-3.10.1.aar\b3c019640507f487e25394afd8e77d51\AndroidManifest.xml:10:9-44
 	android:name
 		ADDED from [com.onesignal:OneSignal:3.10.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\OneSignal-3.10.1.aar\b3c019640507f487e25394afd8e77d51\AndroidManifest.xml:9:9-63
-permission#com.aamari.android.permission.C2D_MESSAGE
+permission#com.cartfull.android.permission.C2D_MESSAGE
 ADDED from [com.onesignal:OneSignal:3.10.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\OneSignal-3.10.1.aar\b3c019640507f487e25394afd8e77d51\AndroidManifest.xml:8:5-10:47
 MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\firebase-iid-12.0.1.aar\9ebde7978a0b4b8680676574f70a35c1\AndroidManifest.xml:28:5-30:47
 MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\firebase-iid-12.0.1.aar\9ebde7978a0b4b8680676574f70a35c1\AndroidManifest.xml:28:5-30:47
@@ -274,7 +274,7 @@ MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\Rajat\.gradle\cac
 MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\firebase-iid-12.0.1.aar\9ebde7978a0b4b8680676574f70a35c1\AndroidManifest.xml:32:5-79
 	android:name
 		ADDED from [com.onesignal:OneSignal:3.10.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\OneSignal-3.10.1.aar\b3c019640507f487e25394afd8e77d51\AndroidManifest.xml:12:22-76
-uses-permission#com.aamari.android.permission.C2D_MESSAGE
+uses-permission#com.cartfull.android.permission.C2D_MESSAGE
 ADDED from [com.onesignal:OneSignal:3.10.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\OneSignal-3.10.1.aar\b3c019640507f487e25394afd8e77d51\AndroidManifest.xml:12:5-79
 MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\firebase-iid-12.0.1.aar\9ebde7978a0b4b8680676574f70a35c1\AndroidManifest.xml:32:5-79
 MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\firebase-iid-12.0.1.aar\9ebde7978a0b4b8680676574f70a35c1\AndroidManifest.xml:32:5-79
@@ -392,7 +392,7 @@ intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE
 ADDED from [com.onesignal:OneSignal:3.10.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\OneSignal-3.10.1.aar\b3c019640507f487e25394afd8e77d51\AndroidManifest.xml:63:13-67:29
 	android:priority
 		ADDED from [com.onesignal:OneSignal:3.10.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\OneSignal-3.10.1.aar\b3c019640507f487e25394afd8e77d51\AndroidManifest.xml:63:28-50
-intent-filter#com.aamari.android+com.google.android.c2dm.intent.RECEIVE
+intent-filter#com.cartfull.android+com.google.android.c2dm.intent.RECEIVE
 ADDED from [com.onesignal:OneSignal:3.10.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\OneSignal-3.10.1.aar\b3c019640507f487e25394afd8e77d51\AndroidManifest.xml:63:13-67:29
 	android:priority
 		ADDED from [com.onesignal:OneSignal:3.10.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\OneSignal-3.10.1.aar\b3c019640507f487e25394afd8e77d51\AndroidManifest.xml:63:28-50
@@ -401,6 +401,10 @@ ADDED from [com.onesignal:OneSignal:3.10.1] C:\Users\Rajat\.gradle\caches\transf
 	android:name
 		ADDED from [com.onesignal:OneSignal:3.10.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\OneSignal-3.10.1.aar\b3c019640507f487e25394afd8e77d51\AndroidManifest.xml:64:25-78
 category#${applicationId}
+ADDED from [com.onesignal:OneSignal:3.10.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\OneSignal-3.10.1.aar\b3c019640507f487e25394afd8e77d51\AndroidManifest.xml:66:17-61
+	android:name
+		ADDED from [com.onesignal:OneSignal:3.10.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\OneSignal-3.10.1.aar\b3c019640507f487e25394afd8e77d51\AndroidManifest.xml:66:27-58
+category#com.cartfull.android
 ADDED from [com.onesignal:OneSignal:3.10.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\OneSignal-3.10.1.aar\b3c019640507f487e25394afd8e77d51\AndroidManifest.xml:66:17-61
 	android:name
 		ADDED from [com.onesignal:OneSignal:3.10.1] C:\Users\Rajat\.gradle\caches\transforms-1\files-1.1\OneSignal-3.10.1.aar\b3c019640507f487e25394afd8e77d51\AndroidManifest.xml:66:27-58

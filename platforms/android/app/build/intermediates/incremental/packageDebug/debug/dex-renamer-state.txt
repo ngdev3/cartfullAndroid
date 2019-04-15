@@ -1,4 +1,4 @@
-#Thu Mar 28 13:52:14 IST 2019
-base.0=J\:\\xampp\\htdocs\\Projects2018\\backup\\AamariApp\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+#Mon Apr 15 18:14:04 IST 2019
+base.0=J\:\\xampp\\htdocs\\Projects2018\\backup\\CartfullAppAndroid\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

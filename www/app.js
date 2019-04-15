@@ -1,7 +1,7 @@
-var project_name = 'cartfull';
+var project_name = 'cartfull_mobile_api/';
 // var base_url = 'http://localhost/amari/';
 // var base_url = 'http://projects.tekshapers.in/amari/';
-var base_url = 'http://projects.tekshapers.in/';
+var base_url = 'http://demo.cartfull.in/';
 var WebUrl = base_url + project_name;
 var app_upload_url = base_url + project_name;
 var app_url = base_url + project_name;
