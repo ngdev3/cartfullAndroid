@@ -1,14 +1,14 @@
-var project_name = 'aamari_mobile_api/';
+var project_name = 'cartfull';
 // var base_url = 'http://localhost/amari/';
 // var base_url = 'http://projects.tekshapers.in/amari/';
-var base_url = 'http://aamarigrocers.com/';
+var base_url = 'http://projects.tekshapers.in/';
 var WebUrl = base_url + project_name;
 var app_upload_url = base_url + project_name;
 var app_url = base_url + project_name;
 var FACEBOOK_APPID = '1421853664598058';
-var Profile_path = 'http://www.aamarigrocers.com/uploads/profile_image/';
+var Profile_path = 'http://projects.tekshapers.in/cartfull/uploads/profile_image/';
 var api_key = '0ed2e4b57d1f837276553b00d3fc2a29';
-var db = window.openDatabase("Aamari", "1.0", "Aamari DB", 1000000);
+var db = window.openDatabase("CartfullApp", "1.0", "CartfullApp DB", 1000000);
 var store_id = '5';
 var uuid = sessionStorage.u_ids;
 var device_type = 'Android';
@@ -236,7 +236,7 @@ app.run(function ($rootScope, $cookieStore, loading, model, $http, $location, $i
     }
 
     if(!uuid || uuid == ''){
-        var text = "Aamari_" + Math.floor(+new Date() / 1000);
+        var text = "CartFull_" + Math.floor(+new Date() / 1000);
         uuid = text;
     }
 
