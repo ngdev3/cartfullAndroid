@@ -1,0 +1,27 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.aamari.android"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.aamari.android"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.aamari.android"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.aamari.android"
+    },
+    "onesignal-cordova-plugin": {
+      "PACKAGE_NAME": "com.aamari.android"
+    }
+  },
+  "dependent_plugins": {}
+}

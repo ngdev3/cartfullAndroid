@@ -1,0 +1,188 @@
+<style>
+.my-profile-edit-form label {
+    display: inline-block;
+    margin-left: 10px;
+    color: #919191;
+    font-weight: 400;
+    font-family: Montserrat-Light;
+}
+html input[disabled] {
+    cursor: default;
+    background: none;
+    padding-left: 0px;
+}
+.profile-detail-name h4 {
+    color: #1f1f1f;
+    font-family: Montserrat-Medium;
+    font-weight: 400;
+}
+.profile-detail-edit-option p{
+color: #1f1f1f;
+    font-family: Montserrat-Light;
+    font-weight: 600;
+}
+</style>
+<div class="bg" ng-controller="myprofile" ng-init="myprofile_data()">
+  <header class="container-fluid nav-down">
+    <div class="row">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid no-padding">
+          <ul class="nav navbar-nav top_header">
+            <li class="menu_icon back_icon" ng-if="backtohomepage != 'home'"><a href="javascript:void(0)"><img ng-click="my_account()" src="assets/img/header/back.png"
+                   alt="menu icon" /></a></li>
+            <li class="menu_icon back_icon" ng-if="backtohomepage == 'home'"><a href="javascript:void(0)"><img ng-click="backtohome()" src="assets/img/header/back.png"
+                  alt="menu icon" /></a></li>
+            <li class="logo_name"><a class="text-left back">My Profile</a></li>
+            <!---<li class="cart_icon mr-5">
+              <a href="javascript:void(0);"><img src="assets/img/edit_profile.png" alt="search icon" /></a>
+            </li> ---->
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+    <!-- MOBILE-MENU-AREA END -->
+  </header>
+
+  <!-- END HEADER -->
+
+
+  <div class="my_profile mt-50 mb-30">
+    <div class="edit-profile pb-10">
+      <div class="profile_pic_container">
+        <div class="profile_pic">
+          <img id="blah" src="{{image}}">
+        </div>
+        <div class="edit-button">
+          <!-- <a><img src="assets/img/edit-button.png"></a> -->
+          <div class="overlay">
+            <form action="" name="profile_form" enctype="multipart/form-data" nonvalidate>
+              <input type="file" ng-model="formData.profile_pic" name="formData.profile_pic" onchange="angular.element(this).scope().profile_update(this)" >
+            </form>
+            <!-- <p>Edit</p> -->
+          </div>
+        </div>
+      </div>
+	  <div class="profile-edit">
+		  <div class="profile-detail-name">
+      <!-- <h4>{{fname | ucwords}}</h4> --> 
+      <div class="my-profile-edit-form mb-20">
+      <input type="text" value="" name="fname" id="username" ng-model="fname" style="text-transform: capitalize;" placeholder="Full Name" readonly required>
+     </div>  
+    </div>
+		  <div class="profile-detail-reset-paswrd" ng-click="reset()">
+			<button>Reset Password</button> 
+		  </div>
+		</div>
+	  <div class="profile-detail-edit-option" id="toEdit">
+	    <a href="javascript:void(0);"><p>Edit</p></a> 
+	  </div>
+    </div>
+	<span class="profile-edit-divider-line"></span>
+
+  </div>
+
+  <form method="post" name="profileForm" class="form-label" novalidate>
+
+    <div class="input-container pl-5" id="sign_up">
+      <div class="my-profile-edit-form mb-20">
+	    <label for="fname">Email Address</label>
+        <input type="text" value="" name="email" ng-model="email" placeholder="user@mail.com" disabled required>
+      </div>
+      <div class="my-profile-edit-form mb-20">
+	    <label for="fname">Mobile Number</label>
+        <input type="text" value="" name="mobile" ng-model="mobile" placeholder="9800000000" disabled required>
+      </div>
+	  <!---- <div class="my-profile-edit-form mb-20">
+	    <label for="fname">Address</label>
+        <input type="text" id="user_name" value="" name="address" ng-model="fname" placeholder="H.NO 1 delhi" readonly required>
+      </div>
+	  <div class="my-profile-edit-form mb-20">
+	    <label for="fname">Postal code</label>
+        <input type="text" value="" name="code" ng-model="mobile" placeholder="100001 " disabled required>
+      </div>
+	  <div class="my-profile-edit-form mb-20">
+	    <label for="fname">City</label>
+        <input type="text" id="user_name" value="" name="city" ng-model="fname" placeholder="Delhi" readonly required>
+      </div>
+	  <div class="my-profile-edit-form mb-20">
+	    <label for="fname">State</label>
+        <input type="text" id="user_name" value="" name="state" ng-model="fname" placeholder="Delhi" readonly required>
+      </div>
+	  <div class="my-profile-edit-form mb-20">
+	    <label for="fname">Country</label>
+        <input type="text" id="user_name" value="" name="country" ng-model="fname" placeholder="India" readonly required>
+      </div>  ---->
+      <div class="my-profile-edit-form mb-20">
+	    <label for="fname">DOB</label>
+        <input kendo-date-picker  ng-model="form.dob" class="dob_input" name="dob" id="dob_picker" style="width: 90%;" k-ng-model="dateObject" k-max = "maxDate" k-options="monthSelectorOptions" placeholder="Date Of Birth" required readonly >
+      </div>
+      <div class="sign-up-form mb-20 mt-30 ml-10" style="box-shadow: none;">
+        <label class="radio-inline gender">
+          Gender
+        </label>
+        <div class="pretty p-icon p-round p-pulse">
+          <input type="radio" id="male" name="gender" ng-model="gender" required disabled value="Male"/>
+          <div class="state p-info-o">
+            <i class="icon fa fa-check" ></i>
+            <label>Male</label>
+          </div>
+        </div>
+        <div class="pretty p-icon p-round p-pulse">
+          <input type="radio" id="female" name="gender" ng-model="gender" required disabled value="Female" />
+          <div class="state p-info-o">
+            <i class="icon fa fa-check" ></i>
+            <label>Female</label>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="sign-up-form mb-20">
+        <input type="text" value="" name="location" ng-model="location" placeholder="Location" required disabled>
+        <img src="assets/img/email.png">
+      </div> -->
+    </div>
+
+
+
+    <div class="sign-up-button mt-35">
+      <button class="btn profile_btn" id="Submit_profile" ng-click="update_profile('profileForm')">
+        Submit
+      </button>
+    </div> 
+  </form>
+
+</div>
+
+<script>
+
+  
+$(document).ready(function() {
+  $('#Submit_profile').hide();
+  $('#toEdit').show();
+});
+
+
+  $("#toEdit").click(function () {
+    alert("You Can Edit Your Profile Now");
+    $("#sign_up").find("input").removeAttr("readonly");
+    $("#username").removeAttr("readonly");
+    $("input[type=radio]").removeAttr("disabled");
+    $('#Submit_profile').show();
+    $('#toEdit').hide();
+  }); 
+
+    document.querySelector("#user_name").addEventListener("keypress", function (evt) {
+        if (evt.which <32 || evt.which>32 && evt.which < 65 || evt.which > 90 && evt.which < 97 || evt.which >122)
+        {
+            evt.preventDefault();
+        }
+    }); 
+    
+  /* document.querySelector("#dob_picker").addEventListener("keypress", function (evt) {
+    if (evt.which < 255)
+    {
+        evt.preventDefault();
+    }
+  }); */ 
+
+</script>

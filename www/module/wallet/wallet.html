@@ -1,0 +1,294 @@
+<style>
+    .ty_main .enter-user-name {
+        margin-top: 80px;
+        font-family: Montserrat-Light;
+        margin-bottom: 55px;
+        font-size: 20px;
+    }
+
+    .wallet-balance {
+        font-family: Montserrat-Light;
+        font-size: 17px;
+        margin-bottom: 35px;
+        color: #51a900;
+        text-align: left;
+    }
+
+    .wallet-balance span {
+        border-bottom: 0px solid #51a900;
+    }
+
+    .add-balance-money {
+        color: #93989B;
+        font-family: Montserrat-Light;
+    }
+
+    .add-balance-money {
+        margin-bottom: 10px;
+    }
+
+
+    .wallet {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .choose-payment h5 {
+        margin-top: 25px;
+        font-family: Montserrat-Regular;
+        font-size: 15px;
+        font-weight: 300;
+        text-align: center;
+        line-height: 22px;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        color: #585858;
+    }
+
+    label.amount-label-balance {
+        float: left;
+        width: 23%;
+        font-family: Montserrat-Light;
+        font-weight: 300;
+        padding-top: 6px;
+    }
+
+
+
+    .card-header h6 {
+        margin-top: 0px;
+        font-family: Montserrat-Regular;
+    }
+
+    .card-header button {
+        padding: 0px;
+        color: #000000;
+        letter-spacing: 0.5px;
+    }
+
+    .card-header {
+        border-radius: 0;
+        box-shadow: none;
+        padding: 12px 15px;
+        background-color: rgba(0, 0, 0, 0.08);
+    }
+
+    div#accordionExample {
+        border: 1px solid #ebebeb;
+        clear: both;
+        overflow: hidden;
+    }
+
+    .card-body {
+        padding: 15px 15px;
+        overflow: hidden;
+    }
+
+    div#collapseOne {
+        font-size: 13px;
+        font-family: Montserrat-Light;
+        width: 100%;
+        float: left;
+        border: 1px solid #ebebeb;
+    }
+
+    .btn-link:focus,
+    .btn-link:hover {
+        color: #000;
+    }
+
+    .credit-card {
+        float: left;
+        width: 100%;
+        margin: 7px 0 15px 0;
+    }
+
+    .choose-payment form {
+        margin-top: 0px;
+        width: 100%;
+    }
+
+    .checkout-cc {
+        width: 11%;
+        float: left;
+    }
+
+    .Add-Payment {
+        float: right;
+        width: 89%;
+    }
+
+    .add-pay {
+        margin-top: 17px;
+        overflow: hidden;
+        clear: both;
+    }
+
+    .add-pay button {
+        background: #51a900;
+        border: 1px solid #51a900;
+        color: #fff;
+        padding: 7px 14px;
+        border-radius: 5px;
+        font-family: Montserrat-Light;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: block;
+    }
+
+</style>
+
+<div class="bg" ng-controller="wallet" ng-init="my_wallet_data()">
+
+    <header class="container-fluid nav-down">
+        <div class="row">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid no-padding">
+                    <ul class="nav navbar-nav top_header">
+                        <li class="menu_icon back_icon"><a href="javascript:void(0)" ng-click="back()"><img src="assets/img/header/back.png"
+                                    id="asdf" alt="menu icon" /></a></li>
+                        <li class="logo_name"><a class="text-left back">My Wallet</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+        <!-- MOBILE-MENU-AREA END -->
+    </header>
+
+    <!-- END HEADER -->
+    <div class="ty_main wallet">
+        <!--<div style="margin-top: 80px;
+        font-family: Montserrat-Light;
+        font-size: 20px;">{{usedata.username}}</div>
+        <div class="enter-user-name" style="margin-top: 14px;">{{usedata.phone_no}}</div> -->
+
+
+
+        <div class="wallet_bal">
+            <div class="bal_heading">
+                <!--<p><img src="assets/img/icon/wallet.png" /></p>-->
+                <p>My Wallet</p>
+            </div>
+            <div class="bal_amt">
+               <!--  <div class="add-cc-money" onclick="addMoney1()">+ Add Money</div> -->
+                <div class="bal_amt_wrapper">
+                    <p><img src="assets/img/wallet-icon.png" alt="wallet"> Rs.
+                        <Span>{{getdata.wallet_balance}}</Span>
+                        <!-- {{getdata.wallet_amount}}-->
+                    </p>
+                    <div class="current-balance">Current Balance</div>
+                </div>
+            </div>
+        </div>
+
+
+    <!--     <div class="wrap-money-all">
+            <div class="add-balance-money"><span>Add Money</span></div>
+            <div class="choose-payment"> -->
+                <!-- <h5>Choose a Payment Method for add money</h5> -->
+                <!--<form method="post" name="profileForm" class="form-label" novalidate>
+
+                    <div class="credit-card">
+                        <div class="accordion1" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <h6 class="mb-0">
+                                        <button class="btn btn-link" type="button"><i class="fa fa-credit-card"
+                                            aria-hidden="true"></i>&nbsp;&nbsp;Credit or Debit Card</button>
+                                    </h6>
+                                </div>
+
+                                <div id="collapseOne" class="collapse in show1" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">-->
+                                        <!-- <div class="checkout-cc"><input type="checkbox" ng-model="creditpay" name="creditpay" required></div> -->
+
+                                        <!--<div class="pretty p-icon p-curve p-pulse">
+                                            <input type="checkbox" ng-model="creditpay" name="creditpay" required>
+                                            <div class="state p-info-o">
+                                                <i class="icon fa fa-check"></i>
+                                                <label>Checkout with ccAvenue</label>
+                                            </div>
+                                        </div>-->
+
+                                        <!-- <div class="Add-Payment"><i class="fa fa-cc" aria-hidden="true"></i>&nbsp;Checkout
+                                        with
+                                        ccAvenue</div> -->
+                                  <!--  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="amount-input-wallet">
+                        <input type="number" class="form-control required" ng-model="amount" name="amount" required id="amount" placeholder="Enter Amount">
+                        <span id="amount_id"></span>
+                        <button type="submit" class="add-round-pay-off" ng-click="update_profile('profileForm')">Add Money</button>
+                    </div>-->
+
+
+                    <!--<div class="add-pay"><button type="submit" class="add-round-pay-off" ng-click="update_profile('profileForm')">Add
+                            Payment&nbsp;&nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>-->
+                </form>
+            </div>
+       
+        <div class="wallet-transaction-id">
+            <h3 class="trans-id">Wallet Transaction Id</h3>
+            <div class="add-by-cash" ng-if="wallet_history">
+                <div class="transaction-wrap" ng-repeat="x in wallet_history"  ng-if = "x.amount != '0.00'">
+                    <div class="ruppee-symbol"><img src="assets/img/ruppe-icon.png" alt=""></div>
+                    <div class="add-by-card">
+                        <p ng-if="x.payment_by == '1'">By Add</p>
+                        <p ng-if="x.payment_by == '2'">By Cancel</p>
+                        <p ng-if="x.payment_by == '3'">By Return</p>
+                        <p ng-if="x.payment_by == '4'">By Place Order</p>
+                        <p ng-if="x.payment_by == '5'">By Loyalty Points Redeems</p>
+                        <strong ng-if="x.payment_by == '2' || x.payment_by == '4'">Order {{x.order_number}}</strong>
+                        <date>{{x.added_date}}</date>
+                        <!-- <span> {{x.added_date.split(' ')[1]}}</span> -->
+                    </div>
+                    <div class="ruppee-aamount"><span ng-if="x.transaction_type == '1'">+</span><span  ng-if="x.transaction_type == '2'">-</span> {{x.amount}}</div>
+                </div>
+                
+              <!--   <div class="transaction-wrap">
+                    <div class="ruppee-symbol"><img src="assets/img/ruppe-icon.png" alt=""></div>
+                    <div class="add-by-card">
+                        <p>Add by Card</p>
+                        <strong>Order #3286914</strong>
+                        <date>28-7-2018 10:00 AM</date>
+                    </div>
+                    <div class="ruppee-aamount">+ Rs 250.00</div>
+                </div> -->
+                
+                <!-- <div class="transaction-wrap">
+                    <div class="ruppee-symbol"><img src="assets/img/ruppe-icon.png" alt=""></div>
+                    <div class="add-by-card">
+                        <p>Add by Card</p>
+                        <strong>Order #3286914</strong>
+                        <date>28-7-2018 10:00 AM</date>
+                    </div>
+                    <div class="ruppee-aamount">+ Rs 250.00</div>
+                </div> -->
+                
+                <!-- <div class="transaction-wrap">
+                    <div class="ruppee-symbol"><img src="assets/img/ruppe-icon.png" alt=""></div>
+                    <div class="add-by-card">
+                        <p>Add by Card</p>
+                        <strong>Order #3286914</strong>
+                        <date>28-7-2018 10:00 AM</date>
+                    </div>
+                    <div class="ruppee-aamount">+ Rs 250.00</div>
+                </div> -->
+            </div>
+            
+                <div class="no_data_main" ng-if="!wallet_history">
+					<img src="img/no_data_found.png">
+					<p>SORRY</p>
+					<p>No Wallet History</p>
+				</div>
+
+           
+        </div> 
+    </div>
+

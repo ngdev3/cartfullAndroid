@@ -1,0 +1,155 @@
+<div ng-controller="orderdetails" ng-init="ordersDetalisInit()" style="overflow: hidden;">
+
+    <header class="container-fluid nav-down">
+        <div class="row">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid no-padding">
+                    <ul class="nav navbar-nav top_header">
+                        <li class="menu_icon back_icon"><a href="javascript:void(0);">
+                                <img src="assets/img/header/back.png" alt="menu icon" ng-click="back();" /></a></li>
+                        <li class="logo_name"><a class="text-left back">Order Details</a></li>
+                        <!-- <li class="cart_icon mr-5" ng-click="downloadinvoice(myordersdetails.invoice_data.invoice_data_name, myordersdetails.invoice_data.invoice_data_url)">
+
+                            <a href="
+                            javascript:void(0);"><img src="assets/img/icon/invoice.png"
+                                    alt="search icon" /></a>
+                        </li> -->
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+        <!-- MOBILE-MENU-AREA END -->
+    </header>
+
+    <!-- END HEADER -->
+
+
+    <div class="order_cnfm mt-50">
+        <div class="dod pr-15">
+            <span><img src="assets/img/clock.png"></span>
+            <span class="font_type">{{myordersdetails.order_deliverytime}},{{myordersdetails.order_deliverydate}}</span>
+        </div>
+        <div class="delivery">
+            <span><img style="width:9%;" src="assets/img/order_deliver.png"></span>
+            <span class="font_type">{{myordersdetails.order_status}}</span>
+        </div>
+    </div>
+    <div class="order_cnfm_order">
+        <div class="dod">
+            <span class="font_type" style="font-weight: bold;">Delivered At:</span><br>
+            <span class="font_type">{{myordersdetails.cust_address}},
+                {{myordersdetails.cust_csz}}
+                {{myordersdetails.cust_landmark}}
+                {{myordersdetails.cust_locality}}
+            </span>
+        </div>
+        <div class="delivery">
+            <span class="font_type">Order ID : {{myordersdetails.order_no}}</span>
+            <br>
+            <!---<span class="font_type">Payment Method: <span>{{paymentmode}}</span></span>--->
+        </div>
+    </div>
+
+
+    <!--ORDER DETAILS -->
+    <div class="scroll_details">
+        <div class="my_order_details" ng-repeat="x in productdetails">
+            <div class="order_detail_img" ng-if= "x.pimage">
+                <img src="{{x.pimage}}">
+            </div>
+            <div class="order_detail_img" ng-if= "!x.pimage">
+                <img src="assets/img/product_placeholder1.png">
+            </div>
+            <div class="order_detail_desc">
+                <div class="product_name_orders">
+                    <h3>{{x.pname}}</h3>
+                </div>
+                <div class="product_rate" style="width:100%;">
+                    <div class="product_qty">
+                        <h3>{{x.weight}}</h3>
+                    </div>
+                    <div class="discount_rate order_detail_discRate"><span></span><span>Qnty {{x.qnty}}</span><br><span></span><span>Rs. {{x.price}}</span></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 
+         <div class="my_order_details">
+             <div class="order_detail_img">
+                 <img src="assets/img/order_detail.png">
+             </div>
+             <div class="order_detail_desc">
+                <div class="product_name">
+                   <h3>Catch Big Cardamom Whole/Elaichi</h3>
+                </div>
+                <div class="product_rate" style="width:100%;">
+                    <div class="product_qty"><h3>2kg</h3></div>
+                    <div class="discount_rate"><span>Rs 600</span><span>Rs 500</span></div>
+                </div>
+             </div>
+         </div>
+         <div class="my_order_details">
+             <div class="order_detail_img">
+                 <img src="assets/img/order_detail.png">
+             </div>
+             <div class="order_detail_desc">
+                <div class="product_name">
+                   <h3>Catch Big Cardamom Whole/Elaichi</h3>
+                </div>
+                <div class="product_rate" style="width:100%;">
+                    <div class="product_qty"><h3>2kg</h3></div>
+                    <div class="discount_rate"><span>Rs 600</span><span>Rs 500</span></div>
+                </div>
+             </div>
+         </div>
+         
+          -->
+    <!--CHECKOUT  -->
+    <div class="fixed_order_details">
+        <div class="price_details">
+            <div class="sub_total">
+                <h3 class="ml-15 mr-15 mt-10">Sub Total <span>Rs. {{myordersdetails.order_subtotal}}</span></h3>
+            </div>
+            <div class="delivery_charge">
+                <h3 class="ml-15 mr-15">Delivery Charges<span><span ng-if="ship_charge !='free'" style="float: none;">Rs.</span> {{myordersdetails.order_shippingcharge | ucwords}}</span></h3>
+            </div>
+           
+            <div class="discount">
+                <h3 class="ml-15 mr-15">Wallet Used Amount<span>Rs. {{myordersdetails.wallet_used_amount}}</span></h3>
+            </div>
+            <div class="discount">
+                    <h3 class="ml-15 mr-15">Total Amount<span>Rs {{myordersdetails.order_total}}</span></h3>
+            </div>
+            <div class="discount">
+                    <h3 class="ml-15 mr-15">Coupon Discount<span>- Rs. {{myordersdetails.promocode_amount}}</span></h3>
+                </div>
+			<div class="total">
+                    <h3 class="ml-15 mr-15">Payable Amount<span>Rs. {{payable_amount | number : 2}}</span></h3>
+					
+				</div>
+            <!---- <div class="discount">
+                <h3 class="ml-15 mr-15">Wallet Used Amount<span>Rs. {{myordersdetails.wallet_used_amount}}</span></h3>
+            </div>
+            <div class="discount">
+                <h3 class="ml-15 mr-15">Order Payable Amount<span>Rs. {{payable_amt}}</span></h3>
+            </div>
+            <div class="total mt-15">
+                <h3 class="ml-5 mr-5"> Total Amount<span>Rs. {{myordersdetails.order_total}}</span></h3>
+            </div>
+            <!-- <div class="discount">
+                    <h3 class="ml-15 mr-15">You Saved<span>Rs. {{savings}}.00</span></h3>
+                </div> -->
+        </div>
+
+        <div class="sign-up-button order-again pt-5 pb-5 mb-10">
+
+            <button class="btn mb-0" ng-click="orderAgain(myordersdetails.order_no)">
+                Order Again
+            </button>
+
+        </div>
+    </div>
+
+</div>

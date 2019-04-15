@@ -1,0 +1,62 @@
+<style>
+
+</style>
+<div ng-controller="myorders" ng-init="ordersInit()">
+
+    <header class="container-fluid nav-down">
+        <div class="row">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid no-padding">
+                    <ul class="nav navbar-nav top_header">
+                        <li class="menu_icon back_icon"><a href="javascript:void(0)"><img ng-click="back()" src="assets/img/header/back.png"
+                                    alt="menu icon" /></a></li>
+                        <li class="logo_name"><a class="text-left back">My Orders</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+        <!-- MOBILE-MENU-AREA END -->
+    </header>
+    <div class="mt-60" ng-if="myorders" id="max-limitorder">
+        <div class="my_orders " ng-repeat="x in myorders">
+            <div class="order_img" ng-click="orderDetails(x.orderno)">
+                <img style="width:100%;" src="assets/img/my_orders.png">
+            </div>
+            <div class="order_desc">
+                <div class="order_type">
+                    <h3 ng-click="orderDetails(x.orderno)">Order No. {{x.orderno}}</h3>
+                    <a class="delete_order" ng-if="x.order_status=='Order Confirm'" ng-click="deleteOrder(x.orderno)">Cancel</a>
+                </div>
+                <div class="date_time" ng-click="orderDetails(x.orderno)">
+                    <div class="clock"><img style="width:100%;" src="assets/img/clock.png"></div>
+                    <div class="timings">
+                        <p>{{x.order_time}}, <span class="today_date">{{x.order_date}}</span></p>
+                    </div>
+
+                </div>
+                <div class="status" ng-click="orderDetails(x.orderno)">
+                    <h3>Total:<span>Rs. {{x.paymoney}}</span></h3>
+                    <h3 class="status">Status:<span>{{x.order_status}}</span></h3>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- {{myorders.length}} -->
+    <div ng-if="myorders.length == 0" class="no_data_found">
+        <div class="no_data_main">
+            <img src="img/no_data_found.png">
+            <p>SORRY</p>
+            <p>{{contentfornodata}}</p>
+        </div>
+
+    </div>
+    <!-- END HEADER -->
+
+
+
+
+</div>

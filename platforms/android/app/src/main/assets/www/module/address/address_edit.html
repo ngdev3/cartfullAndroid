@@ -1,0 +1,155 @@
+<div class="bg" ng-controller="address_edit" ng-init="address_edit_data()">
+    <header class="container-fluid nav-down">
+        <div class="row">
+            <nav class="navbar navbar-inverse">
+            <div class="container-fluid no-padding">
+                <ul class="nav navbar-nav top_header">
+                <li class="menu_icon back_icon" ><a href="javascript:void(0)" ng-click="backToAddress()" ><img src="assets/img/header/back.png" id="asdf" alt="menu icon"  /></a></li>
+                <li class="logo_name"><a class="text-left back">Edit Address</a></li>
+                <li class="cart_icon mr-5">
+                    
+                    <a href="javascript:void(0)"></a>
+                </li>
+                </ul>
+            </div>
+            </nav>
+        
+        </div>
+        <!-- MOBILE-MENU-AREA END -->
+    </header>
+
+    <!-- END HEADER -->    
+        
+        
+        
+    <form method="post" name="edit_address_form" novalidate>	
+        <div class="input-container pr-20 pl-20 mt-70 address_fill" id="sign_up">
+            <!--  <h3>{{x.title}}</h3>
+            </div>  -->
+            <div class="sign-up-form mb-20 text-center" style="box-shadow: none;">                    
+                <div class="pretty p-icon p-round p-pulse">
+                    <input type="radio" ng-model="address_type" onclick="hidediv();" name="address_type" required value="home"/>
+                    <div class="state p-info-o">
+                    <i class="icon fa fa-check"></i>
+                    <label>Home</label>
+                    </div>
+                </div>
+                <div class="pretty p-icon p-round p-pulse">
+                    <input type="radio" ng-model="address_type" onclick="hidediv();"  name="address_type" required value="work"/>
+                    <div class="state p-info-o">
+                    <i class="icon fa fa-check"></i>
+                    <label>Work</label>
+                    </div>
+                </div>
+                <div class="pretty p-icon p-round p-pulse">
+                    <input type="radio" ng-model="address_type" onclick="hidediv();" id="showdiv" name="address_type" required value="other"/>
+                    <div class="state p-info-o">
+                    <i class="icon fa fa-check"></i>
+                    <label>Other</label>
+                    </div>
+                </div>
+            </div>   
+            <div class="sign-up-form mb-20" ng-if="address_type == 'other'">
+                <input  type="text" id="othertype" name="othertype" ng-model="form.othertype" placeholder="Add Title"  value="" required>
+                <span><i class="fa fa-address-book-o" aria-hidden="true"></i></span>
+            </div>  
+            <div class="sign-up-form mb-20">
+                <input type="text" id="full_name" value="" name="fname" ng-model="fname" placeholder="Full Name"  required>
+                <span><i class="fa fa-address-book-o" aria-hidden="true"></i></span>
+            </div>
+             <div class="sign-up-form mb-20">
+                <input type="text" value="" id="house_no" name="house_no" ng-model="house_no" placeholder="Address | Flat, Plot Number" required>
+                <span><i class="fa fa-home" aria-hidden="true"></i></span>
+            </div> 
+            <div class="sign-up-form mb-20">
+                <input type="number" id="mob_no" value="" placeholder="Mobile Number" name="mob_number" ng-model="mob_number" class="animated fadeInRight" required>
+                <img src="assets/img/icon/contact_us.png" class="mobile_img animated fadeInLeft">
+              </div>
+            <div class="sign-up-form mb-20">
+                <input type="text" value="" id="street" name="street" ng-model="street" placeholder="Locality" required disabled>
+                <span><i class="fa fa-street-view" aria-hidden="true"></i></span>
+            </div>
+            <div class="sign-up-form mb-20">
+                <input type="text" id="city" value="" name="city" ng-model="city" placeholder="City" required disabled>
+                <span><i class="fa fa-globe" aria-hidden="true"></i></span>
+            </div>
+            <div class="sign-up-form mb-20">
+                <input type="text" id="landmark" value="" name="landmark" ng-model="landmark" placeholder="Landmark" required>
+                <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+            </div>
+            <div class="sign-up-form mb-20">
+                <input type="text" id="state" value="" name="state" ng-model="state" placeholder="State" required disabled>
+                <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+            </div>
+            <div class="sign-up-form mb-20">
+                <input type="text" value="" id="pin_code" name="pincode" ng-model="pincode" maxlength="6" placeholder="pincode" >
+                <span><i class="fa fa-address-book-o" aria-hidden="true"></i></span>
+            </div>      
+        </div>
+    
+        
+        <!-- TERMS AND CONDITION -->
+        
+
+        
+        <!-- SUBMIT BUTTON -->
+        <div class="sign-up-button mt-35 mb-35">
+            <a href="javascript:void(0)"><button class="btn" ng-click="edit_address('edit_address_form')">
+                Submit
+            </button></a>
+        </div>  
+    </form>
+</div>
+
+<script>
+    document.querySelector("#pin_code").addEventListener("keypress", function (evt) {
+        if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
+        {
+            evt.preventDefault();
+        }
+    });  
+    document.querySelector("#street").addEventListener("keypress", function (evt) {
+        if (evt.which <32 || evt.which>32 && evt.which < 48 || evt.which > 57 && evt.which < 65 || evt.which > 91 && evt.which < 97 || evt.which >122 )
+        {
+            evt.preventDefault();
+        }
+    }); 
+    document.querySelector("#landmark").addEventListener("keypress", function (evt) {
+        if (evt.which <32 || evt.which>32 && evt.which < 48 || evt.which > 57 && evt.which < 65 || evt.which > 90 && evt.which < 97 || evt.which >122 )
+        {
+            evt.preventDefault();
+        }
+    }); 
+    
+    document.querySelector("#full_name").addEventListener("keypress", function (evt) {
+        if (evt.which <32 || evt.which>32 && evt.which < 65 || evt.which > 90 && evt.which < 97 || evt.which >122)
+        {
+            evt.preventDefault();
+        }
+    });
+    
+    document.querySelector("#city").addEventListener("keypress", function (evt) {
+        if (evt.which <32 || evt.which>32 && evt.which < 65 || evt.which > 90 && evt.which < 97 || evt.which >122)
+        {
+            evt.preventDefault();
+        }
+    });
+
+    /* document.querySelector("#house_no").addEventListener("keypress", function (evt) {
+        if (evt.which <32 || evt.which>32 && evt.which < 48 || evt.which > 57 && evt.which < 65 || evt.which > 90 && evt.which < 97 || evt.which >122 && evt.which !=45)
+        {
+            evt.preventDefault();
+        }
+    }); */
+
+    function hidediv(){
+    if($('#showdiv').prop('checked'))
+    {
+        $('#othertype').show();
+    }else{
+        $('#othertype').hide();
+    }
+
+}
+  
+</script>

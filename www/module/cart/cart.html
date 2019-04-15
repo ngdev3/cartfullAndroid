@@ -1,0 +1,97 @@
+<style>
+.mr-7{
+margin-right:7px !important;}
+</style>
+<div class="bg" ng-controller="cart">
+	<header class="container-fluid nav-down">
+		<div class="row">
+			<nav class="navbar navbar-inverse">
+				<div class="container-fluid no-padding">
+					<ul class="nav navbar-nav top_header">
+						<li class="menu_icon back_icon" ng-if="!backtogo"><a href="javascript:void(0)"><img ng-click="backbycon()" src="assets/img/header/back.png"
+								 id="asdf" alt="menu icon" /></a></li>
+						<li class="menu_icon back_icon" ng-if="backtogo"><a href="javascript:void(0)"><img ng-click="backtohome()" src="assets/img/header/back.png"
+								 id="asdf" alt="menu icon" /></a></li>
+						<li class="logo_name"><a class="text-left back">My Cart</a></li>
+						<li style="float: right"><button ng-click="empty_cart()" style="float: right; margin-top: 5px; margin-right: 10px;border: none;
+			background: none;">
+			<img height="27px" width="27px" src="assets/img/empty-cart.png"></button></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<!-- MOBILE-MENU-AREA END -->
+	</header>
+
+	<!-- END HEADER -->
+	<div ng-if="currentcartitems" style="height: 100vh;position: relative; overflow: hidden;">
+		<div class="mt-50">
+			<div class="scroll_cart">
+				<div id="view_cart" class="cart_container no-padding" ng-repeat="x in currentcartitems">
+
+					<div class="whole_cart mt-10 mb-10">
+						<div class="cart_item">
+							<div class="cart_image" ng-if="x.pimage">
+								<img style="width: 75px;" ng-click="product_view(x.pid)" src="{{x.pimage}}">
+							</div>
+							<div class="cart_image" ng-if="!x.pimage">
+								<img style="width: 75px;" ng-click="product_view(x.pid)" src="assets/img/category/product_placeholder1.png">
+							</div>
+							<div class="cart_desc">
+								<h3 ng-click="product_view(x.pid)" >{{x.pname}}</h3>
+								<h3 class="quantity">{{x.weight}}</h3>
+								<div class="rate">
+									<div class="item_price">
+										<p class="cut_price" style="font-weight: 400;
+										color: #ccc;font-size: 12px;" ng-if="x.aprice != ''">MRP Rs {{x.aprice * x.qnty | number : 2}}</p>
+										<p class="item_price"><span ng-if="x.aprice != ''">NOW @</span> <span ng-if="x.aprice == ''">MRP Rs.</span> {{x.p_subtotal}}</p>
+									</div>
+									<div class="add_item_button">
+										<button class="less_item" data-weightid="{{x.wieghtid}}" id="minus_{{x.wieghtid}}" ng-click="minusToCart($event)">-</button>
+										<input type="text" id="quantity_{{x.wieghtid}}" value="{{x.qnty}}" disabled="">
+										<button class="add_item" data-weightid="{{x.wieghtid}}" id="plus_{{x.wieghtid}}" ng-click="plusToCart($event)">+</button>
+									</div>
+								</div>
+								<a><img src="assets/img/delete.png" ng-click="singleDelete(x.wieghtid)"></a>
+							</div>
+						</div>
+
+					</div>
+
+
+				</div>
+			</div>
+
+		</div>
+
+		<div class="fixed_checkout">
+			<div class="price_details">
+			   <!--  <div class="sub-total-chagre mb-10">Sub Total<span>{{currentcartprice.cart_subtotal}}</span></div>
+			    <div class="delivery-chagre mb-10">Shipping and Handling <span>Rs.00</span></div> -->
+				
+				<div class="total">
+					<h3 class="ml-10 mr-7"> Total <span>Rs {{currentcartprice.cart_subtotal}}</span></h3>
+				</div>	
+			</div>
+
+			<div class="sign-up-button checkout mb-10" ng-click="paymentsummary()">
+				<a href="javascript:void(0)">
+					Procced to checkout
+                <!--<img src="assets/img/checkout_arrow.png">-->
+				</a>
+
+			</div>
+		</div>
+	</div>
+	<div class="empty_cart_main" id="view_cart mt-50" ng-if="!currentcartitems">
+		<div class="empty_cart">
+			<img src="img/emptycart_icon.png" alt="" />
+			<h3>Cart is empty</h3>
+			<p>you have no items in your shopping cart.</p>
+			<div class="shop_now text-center mt-20"><a href="javascript:void(0)" ng-click="homePage()">Shop Now</a></div>
+		</div>
+	</div>
+
+
+
+</div>

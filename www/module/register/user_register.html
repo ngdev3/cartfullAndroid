@@ -1,0 +1,95 @@
+<div class="bg" ng-controller="user_register">
+  <style>
+    .pretty .state label:after,
+    .pretty .state label:before {
+      width: calc(1em + 0px);
+      height: calc(1em + 0px);
+    }
+  </style>
+  <div class="app_bg">
+    <form method="post" name="registerform" class="form-label" novalidate>
+
+      <div class="sign-in-logo  animatedParent animateOnce">
+        <div class="logo-container animated fadeInDown slow">
+          <img src="assets/img/logo.png">
+        </div>
+      </div>
+      <div class="sign-up-div mb-50 animatedParent animateOnce">
+        <a href="javascript:void(0)" class="sign-up animated fadeInLeft">Sign up</a>
+      </div>
+
+      <div class="input-container pr-20 pl-20 animatedParent animateOnce" id="sign_up">
+        <div class="sign-up-form mb-20">
+          <input type="text" id="full_name" value="" placeholder="Full Name" name="fname" ng-model="fname"
+            class="animated fadeInRight" required>
+          <img src="assets/img/name.png" class="animated fadeInLeft">
+        </div>
+        <div class="sign-up-form mb-20">
+          <input type="text" value="" placeholder="Email" name="email" ng-model="email" class="animated fadeInRight"
+            required>
+          <img src="assets/img/email.png" class="animated fadeInLeft">
+        </div>
+        <div class="sign-up-form mb-20">
+          <input type="number" id="mob_no" value="" placeholder="Mobile Number" name="mob_number" ng-model="mob_number"
+            class="animated fadeInRight" required>
+          <img src="assets/img/phone.png" class="mobile_img animated fadeInLeft">
+        </div>
+        <div class="sign-up-form mb-20">
+          <input type="password" value="" placeholder="Create Password" name="password" ng-model="password"
+            class="animated fadeInRight" required>
+          <img src="assets/img/password.png" class="animated fadeInLeft">
+        </div>
+        <div class="sign-up-form mb-20">
+          <input type="password" value="" placeholder="Confirm Password" name="confirm_password"
+            ng-model="confirm_password" class="animated fadeInRight" required>
+          <img src="assets/img/password.png" class="animated fadeInLeft">
+        </div>
+        <div class="sign-up-form sign-up-form-refferal  mb-20">
+          <input type="text" id="referral" value="" placeholder="Referral Code" name="referral_code"
+            ng-model="referral_code" class="animated fadeInRight" required>
+          <div class="refferal-button">
+            <button ng-if="codeapplied == 0" ng-click="checkrefferal(referral_code)">Validate</button>
+            <button class="validated" ng-if="codeapplied == 1">Validated</button>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- TERMS AND CONDITION -->
+      <div class="terms">
+        <div class="pretty p-icon p-curve p-pulse">
+          <input type="checkbox" name="term_conditions" ng-model="term_conditions" required>
+          <div class="state p-info-o">
+            <i class="icon  fa fa-check"></i>
+            <label>By registering, I agree to <span ng-click="terms()">Terms and Condition</span></label>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- SUBMIT BUTTON -->
+      <div class="sign-up-button mt-35 animatedParent animateOnce">
+        <button class="btn animated fadeInUp" ng-click="user_registers('registerform')">
+          Sign up
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  document.querySelector("#full_name").addEventListener("keypress", function (evt) {
+    if (evt.which < 32 || (evt.which > 32 && evt.which < 65) || (evt.which > 90 && evt.which < 97) || evt.which > 122) {
+      evt.preventDefault();
+    }
+  });
+
+
+  document.querySelector("#mob_no").addEventListener("keypress", function (evt) {
+    if (evt.which != 13 && evt.which < 48 || evt.which > 57) {
+      // alert('Please Enter Only Number')
+      evt.preventDefault();
+    }
+  });
+</script>

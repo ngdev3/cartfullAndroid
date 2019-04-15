@@ -1,0 +1,63 @@
+<div ng-controller="otp">
+
+    <div class="app_bg">
+        <form method="post" name="otpform" novalidate>
+		    <div class="enter-otp-head">
+			    <h3>Enter OTP</h3>
+			</div>
+            <div class="otp_verify mt-120">
+                <div class="otp_send_msg">
+                    <p>Please type the verification code sent to +91 {{sendAt}}</p>
+                </div>
+            </div>
+            <!-- {{first}} -->
+            <div class="container">
+                <div id="otp">
+                    <div class="digit">
+                        <!-- <div class="digit1">
+                            <input type="number" name="first" ng-model="first" oninput="this.value=this.value.replace(/,1,/g,'');"
+                                placeholder="*" minlength="1" maxlength="1" required>
+                        </div> -->
+
+                        <!-- <div class="digit2">
+                            <input type="number" ng-model="second" name="second" placeholder="*" autocomplete="on"
+                                required>
+                        </div> -->
+                       
+                            <input type="number" ng-model="first"  id="first" name="first" placeholder="*"  maxlength="1" required>
+                       
+                            <input type="number" ng-model="second" id="second" name="second" placeholder="*"  maxlength="1" required>
+                       
+						
+                            <input type="number" ng-model="third" id="third" name="third" placeholder="*"  maxlength="1" required>
+                        
+						
+                            <input type="number" ng-model="fourth" id="fourth" name="fourth" placeholder="*" maxlength="1" required>
+                       
+                        <!-- <div class="digit4">
+                            <input type="number" ng-model="fourth" name="fourth" placeholder="*" autocomplete="on"
+                                required>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="sign-up-button">
+                <button class="otp-btn" ng-click="otpVerification('otpform')"> Submit </button>
+            </div>
+            <div class="resend_otp mt-15">
+                <a href="javascript:void(0)" class="mr-30" ng-click="resendOtps()"> Resend OTP</a>
+            </div>
+        </form>
+    </div>
+
+</div>
+<script>
+ $(document).ready(function(){
+        $('input').keyup(function(){
+            if($(this).val().length==$(this).attr("maxlength")){
+                $(this).next().focus();
+            }
+        });
+    });
+
+</script>

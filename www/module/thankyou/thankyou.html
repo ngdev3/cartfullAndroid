@@ -1,0 +1,47 @@
+<style>
+	.nav > li.logo_name {
+    width: 100%;
+	text-align:center;
+	
+}
+</style>
+<div class="bg" ng-controller="thankyou" ng-init="thanks()">
+    <header class="container-fluid nav-down">
+        <div class="row">
+          <!--  <nav class="navbar navbar-inverse">
+                <div class="container-fluid no-padding">
+                    <ul class="nav navbar-nav top_header">
+                        <!-- <li class="menu_icon back_icon"><a href="javascript:void(0)"  ><img src="assets/img/header/back.png" id="asdf" alt="menu icon" /></a></li>
+                     
+                        <li class="logo_name"><a class="back">Order Confirmed</a></li>
+
+                    </ul>
+                </div> -->
+            </nav>
+        </div>
+        <!-- MOBILE-MENU-AREA END -->
+    </header>
+
+    <!-- END HEADER -->
+    <div class="ty_main">
+
+        <div class="ty_logo text-center">
+            <img src="assets/img/thank_you.png">
+        </div>
+        <div class="order_cnfrm text-center">
+            <h3>Thank You For Shopping With Us</h3>
+            <p>Your Order Has Been Placed</p>
+            <p>Order No : <span>{{orderid}}</span></p>
+        </div>
+        <div class="back_links_order_details detail-checkout">
+            <div class="order_back_order mt-10"><a href="javascript:void(0)" ng-click="seeOrders()">
+                    <p>View Order Details</p>
+                </a></div>
+        </div>
+		<div class="close-thank-you">
+		    <a href="javascript:void(0);" ng-click="goToHome()"><img src="assets/img/cross-back.png"></a>
+		</div>
+		
+    </div>
+
+</div>

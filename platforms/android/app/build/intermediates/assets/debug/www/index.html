@@ -1,0 +1,234 @@
+<html ng-app="myApp">
+
+<head>
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, height=device-height" />
+    <!--Start Slider Css files-->
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+
+
+    <!--- owl carousel Css-->
+    <link rel="stylesheet" href="assets/owlcarousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.css">
+    <!-- touchspin css -->
+    <link rel="stylesheet" href="assets/css/jquery.bootstrap-touchspin.css" media="screen">
+    <!-- price slider css -->
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css" media="screen">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/viewbox.css">
+    <!-- <link rel="stylesheet" href="assets/css/animations.css"> -->
+
+    <!-- checkbox  CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+
+    <!-- Kendo DatePicker CSS files-->
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.3.911/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="css/kendo.rtl.min.css" />
+    <link rel="stylesheet" href="css/kendo.silver.min.css" />
+    <link rel="stylesheet" href="css/kendo.mobile.all.min.css" />
+
+
+	
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Responsive  CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+
+    <!--[if lt IE 9]>
+    	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <link rel="stylesheet" href="css/jquery-confirm.min.css">
+
+<!-- slider -->
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="assets/slider/slick.min.css"/>	
+    <link rel="stylesheet" type="text/css" href="assets/slider/slick-theme.min.css"/>
+	<link rel="stylesheet" href="assets/swipe/angular-sidebarjs.min.css">
+
+
+    <!--End Slider Css files-->
+
+
+
+
+    <title>Aamari App</title>
+
+</head>
+
+<body class="bg-color-dynamic" onclick="closeNav();">
+    <!--  Loader -->
+
+    <!--Loading Image-->
+    <div class="loading-overlay hide" id="loading">
+        <div class="loading" style="z-index: 99999999;">
+            <img src="img/amari_loader-app.gif" style="margin: 0 auto;">
+        </div>
+    </div>
+    <!--End of Loading Image-->
+    <!--search loader Image-->
+    <div class="loading-overlay hide search_loader" id="searchloder">
+        <div class="loading_search" style="z-index: 99999999;">
+            <img src="img/search_loader.gif" style="margin: 0 auto;">
+        </div>
+    </div>
+    <!--End of search loader Image-->
+
+    <!--Pop up-->
+    <div class="pop_up_div obscure hide ">
+        <div class="pop_up_display">
+            <div class="main_pop_up" style="z-index:9999999;">
+                <div class="popup2 animationClose">
+                    <div class="hedingpopup">
+                        <!-- <img src="img/popuplogo.png" class="left"> -->
+                        <span class="left title">Commercial Spaces</span>
+                        <div class="clearfix"></div>
+                    </div>
+                    <p class="poupp message"></p>
+                    <p class="closeBtn pop_up_cnfm" ng-click="globalAction(true)" href="javascript:void(0);">OK</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of Pop up-->
+
+
+    <div ng-view></div>
+    <div class="backdrop"></div>
+    </div>
+    <!-- <div style="background: url(img/bg1.png);background-repeat: no-repeat;background-color:#262626;background-size:contain;overflow-y:auto;height: 100%;width: 100%;position:fixed;background-position:center center;"></div> -->
+    <!--Created On:- 05-07-2017 01.00PM, Created By :- Rajat Gupta-->
+
+
+    <!-- Start System Files -->
+    <script src="system/jquery-3.3.1.min.js"></script>
+    <!-- <script src="assets/js/css3-animate-it.js"></script> -->
+    <script type="text/javascript" src="system/angular.js"></script>
+    <script type="text/javascript" src="system/lib/ngCordova/dist/ng-cordova.js"></script>
+    <script type="text/javascript" src="system/lib/ng-cordova-oauth/dist/ng-cordova-oauth.js"></script>
+    <script type="text/javascript" src="system/ng-cordova.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2zPpPAu5PR7dkkTWd71YtsDe5z4nznmw&libraries=places"
+        async defer></script>
+    <script type="text/javascript" src="assets/js/geolocations/lodash.underscore.min.js"></script>
+    <!-- <script type="text/javascript" src="assets/js/geolocations/angular-google-maps.min.js"></script> -->
+
+    <script type="text/javascript" src="system/ng-infinite-scroll.min.js"></script>
+    <script type="text/javascript" src="system/angular-touch.js"></script>
+    <script type="text/javascript" src="system/angular-cookies.js"></script>
+    <script type="text/javascript" src="system/angular-messages.js"></script>
+    <script type="text/javascript" src="system/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script> 
+    <script src="assets/slider/angular-slick.js"></script>
+    <script type="text/javascript" src="system/angular-sanitize.js"></script>
+    <script type="text/javascript" src="system/ui-bootstrap-tpls.min.js"></script>
+
+    <script src="https://kendo.cdn.telerik.com/2018.3.911/js/kendo.all.min.js"></script>
+
+
+
+    <!-- Latest jQuery -->
+    <!-- Latest jQuery -->
+
+    <!-- Latest compiled and minified Bootstrap -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+    <script src="assets/js/jquery.viewbox.min.js"></script>
+    <!-- modernizer JS -->
+    <script src="assets/js/modernizr-2.8.3.min.js"></script>
+    <!-- owl-carousel min js  -->
+    <script src="assets/owlcarousel/js/owl.carousel.min.js"></script>
+    <!--  touchspin js -->
+    <script src="assets/js/jquery.bootstrap-touchspin.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script> -->
+    <!--  price slider js -->
+
+    <script src="css/jquery-confirm.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="assets/js/main.js"></script>
+
+
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+    <script src="assets/map/ng-map.min.js"></script>
+
+    <!-------------date picker js-------------->
+    <script data-require="ui-bootstrap@0.12.1" data-semver="0.12.1" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.min.js"></script>
+    <!----------------End date picker js------------------>
+
+
+    <!-- Start Module Files -->
+    <script type="text/javascript" src="module/splash/splash.js"></script>
+    <script type="text/javascript" src="module/login/login.js"></script>
+    <script type="text/javascript" src="module/forgot/forgot.js"></script>
+    <script type="text/javascript" src="module/changepassword/changepassword.js"></script>
+    <script type="text/javascript" src="module/register/register.js"></script>
+    <script type="text/javascript" src="module/address/address.js"></script>
+    <script type="text/javascript" src="module/address/address_edit.js"></script>
+    <script type="text/javascript" src="module/address/address_add.js"></script>
+    <script type="text/javascript" src="module/cms/about_us/about_us.js"></script>
+    <script type="text/javascript" src="module/category/category.js"></script>
+    <script type="text/javascript" src="module/cms/privacy_policy/policy.js"></script>
+    <script type="text/javascript" src="module/cms/terms_and_conditions/terms_and_conditions.js"></script>
+    <script type="text/javascript" src="module/dashboard/home.js"></script>
+    <script type="text/javascript" src="module/cart/cart.js"></script>
+    <script type="text/javascript" src="module/myaccount/myaccount.js"></script>
+    <script type="text/javascript" src="module/myaccount/myprofile.js"></script>
+    <script type="text/javascript" src="module/order/my_orders/my_orders.js"></script>
+    <script type="text/javascript" src="module/order/my_orders_details/my_orders_details.js"></script>
+    <script type="text/javascript" src="module/product/list/product_list.js"></script>
+    <script type="text/javascript" src="module/product/list/home_product_list.js"></script>
+    <script type="text/javascript" src="module/product/view/product_view.js"></script>
+    <script type="text/javascript" src="module/notification/notification.js"></script>
+    <script type="text/javascript" src="module/otp/otp.js"></script>
+    <script type="text/javascript" src="module/payment/payment_summary.js"></script>
+    <script type="text/javascript" src="module/payment/paytm_payment.js"></script>
+    <script type="text/javascript" src="module/payment/payment_mode.js"></script>
+    <script type="text/javascript" src="module/address_detail/address_detail.js"></script>
+    <script type="text/javascript" src="module/subcategory/subcategory.js"></script>
+    <script type="text/javascript" src="module/delivery/delivery_time.js"></script>
+    <script type="text/javascript" src="module/thankyou/thankyou.js"></script>
+    <script type="text/javascript" src="module/fetch_store/fetch.js"></script>
+    <script type="text/javascript" src="module/offers/offers.js"></script>
+    <script type="text/javascript" src="module/forgot/newpassword.js"></script>
+    <script type="text/javascript" src="module/wallet/wallet.js"></script>
+    <script type="text/javascript" src="module/myreward/myreward.js"></script>
+    <script type="text/javascript" src="module/cms/contact_us/contact_us.js"></script>
+
+    <!-- End Module Files -->
+
+    <!-- Google Location Files -->
+    <script type="text/javascript" src="assets/js/geolocations/geolocation.js"></script>
+    <!-- End Google Location Files -->
+
+    <script>
+        //Used to handle pop-up alert message box
+        $('.closeBtn').click(function () {
+            $('.obscure').removeClass('show').addClass('hide');
+        });
+    </script>
+
+    <!-- Start Core Files -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <!-- End Core Files -->
+
+
+
+
+
+</body>
+
+</html>

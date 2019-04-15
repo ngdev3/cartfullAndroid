@@ -1,0 +1,88 @@
+<div class="bg" ng-controller="offers" ng-init="newoffers()">
+	<header class="container-fluid nav-down">
+		<div class="row">
+			<nav class="navbar navbar-inverse">
+				<div class="container-fluid no-padding">
+					<ul class="nav navbar-nav top_header">
+						<li class="menu_icon back_icon"><a href="javascript:void(0);"><img src="assets/img/header/back.png" id="asdf"
+								 ng-click="back()" alt="menu icon" /></a></li>
+						<li class="logo_name"><a class="text-left back">All Offers</a></li>
+						<li class="cart_icon">
+							<a href="javascript:void(0);"><img src="assets/img/header/user_icon.png" ng-click="my_account()" alt="heart icon" /></a>
+							<a href="javascript:void(0);"><img src="assets/img/header/cart_icon.png" ng-click="opencart()" alt="cart icon"
+								 style="width: 15px;" /><span class="badge">{{activeCartValue}}</span></a>
+							<a href="javascript:void(0);"><img src="assets/img/header/search_icon.png" ng-click="check_list()" alt="search icon" /></a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav bottom_header">
+						<li class="menu_search_container"><a href="javascript:void(0);">
+								<img src="assets/img/header/search_icon.png" alt="cart icon" />
+								<input type="text" ng-keyup="searchbar()" ng-model="search" class="menu_search" placeholder="Search products brands and more" />
+								<button class="search_bar_span" ng-click="searchtoproducts(search)" ><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+							</a></li>
+					</ul>
+				<div id="main_div1">	
+					<ul class="search_list">
+							<!-- <li ng-if="enableDiv">
+                                    Showing result for "{{search}}" {{total_record}} records found
+                            </li> -->
+						<li class="search_list_li" ng-repeat="x in searchresult" ng-click="product_view(x.pid)" ng-if="enableDiv">
+							<div class="search_img">
+								<img src="{{x.pimage}}">
+							</div>
+							<div class="search_name"><span>{{x.product_name |limitTo : 35}}{{x.product_name.length > 35 ? '...' : ''}}</span></div>
+						</li>
+						<li class="search_list_li" ng-if="resultstatus">
+							<div class="search_name" style="width: 100%; padding-left: 5px;display: block;text-align: center"><span>Typing</span>
+								<img src="img/loading21.gif" alt="" style="height: 6px;"></div>
+						</li>
+						<li class="search_list_li" ng-if="datanotfound">
+							<div class="search_name" style="    width: 100%;padding-left: 5px; display: block; text-align: center"><span>Not
+									Found </span><br>
+								<img src="img/notfoundemogi.gif" alt="" style="height: 25px;">
+							</div>
+						</li>
+
+					</ul>
+				</div>
+				</div>
+			</nav>
+
+		</div>
+		<!-- MOBILE-MENU-AREA END -->
+	</header>
+
+	<!-- END HEADER -->
+
+
+	<div class="container-fluid mb-15 animatedParent animateOnce" id="category_list">
+		<div class="row">
+			<div class="col-xs-12 pl-5 pr-5 mb-5 offers_main" ng-repeat="category in offersDarta" ng-click="subcategory(category.offer_cat, category.offer_name, category.parent)">
+				<div class="animated fadeInLeft slow go">
+					<a href="javascript:void(0);">
+						<div class="offer_img_cont">
+							<img src="{{category.offer_image}}" alt="" class="img-responsive">
+							<!--<div class="catg_overlay text-center">
+								<p>{{category.offer_name}}</p>
+							</div>-->
+						</div>
+					</a>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+</div>
+
+
+<script>
+	$(document).ready(function () {
+		$(".cart_icon a:last-child").click(function () {
+			$(".bottom_header").slideToggle();
+			//$("#banner_slider").toggleClass("search-container")
+		})
+
+
+	});
+</script>

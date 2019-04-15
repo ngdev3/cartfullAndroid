@@ -1,0 +1,78 @@
+<div class="bg" ng-controller="delivery_time" ng-init="getDeliveryTime()">
+
+  <header class="container-fluid nav-down">
+    <div class="row">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid no-padding">
+        <ul class="nav navbar-nav top_header">
+          <li class="menu_icon back_icon"><a href="javascript:void(0)"  ><img src="assets/img/header/back.png"  alt="menu icon" ng-click="toAddress()"/></a></li>
+          <li class="logo_name"><a class="text-left back" >Date & Time</a></li>
+          
+        </ul>
+        </div>
+      </nav>
+    
+    </div>
+    <!-- MOBILE-MENU-AREA END -->
+  </header>
+  
+  <!-- END HEADER -->    
+       
+    
+    
+    
+    
+      
+    <!-- Add Address-->
+    <div class="delivery_head mt-50"><h3>Choose Your preferred date and time slot</h3></div>
+    <form method="post" name="delivery_form" novalidate>
+    <div class="delivery_time pb-40"> 
+      <div class="delivery_select" >
+        
+        <select ng-model="deliveryday" id=""  name="deliveryday" ng-init="deliveryday = delivery_day[0].day_name" ng-change="updatedTimeSlot(deliveryday)">
+          <option ng-repeat="dayTime in delivery_day"  ng-selected="{{deliveryday == dayTime.day_name}}" ng-value="dayTime.day_name">{{dayTime.day_name | ucwords}}</option>
+          
+        </select>
+      </div>
+      
+      <!-- {{dataFromTimeSlots}} -->
+      <div class="mb-20">
+        <div  id="payment_main" ng-if="dataFromTimeSlots" style="box-shadow: none;" ng-repeat="timeslot in dataFromTimeSlots track by $index">
+            <div class="pretty p-icon p-round p-pulse delivery_div" >
+              <input type="radio" class="radioelement" id="abc_$index" ng-model="form.icon" required name="icon" ng-change="TimeSlot(form.icon,deliveryday)" ng-value="timeslot.timeslot_db" />
+              <div class="state p-info-o">
+                <i class="icon fa fa-check"></i>
+                <label>{{timeslot.timeslot_value}}</label>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div  ng-if="!dataFromTimeSlots" style="margin-top: 50px;">
+              No Time Slots At This Day Please Select Any Other Day.
+            </div>
+            
+            
+            <!-- 
+              
+              <div class="pretty p-icon p-round p-pulse delivery_div">
+          <input type="radio" name="icon" />
+           <div class="state p-info-o">
+           <i class="icon fa fa-check"></i>
+           <label>14:00 - 16:00</label>
+           </div>
+        </div>
+        <div class="pretty p-icon p-round p-pulse delivery_div">
+          <input type="radio" name="icon" />
+           <div class="state p-info-o">
+           <i class="icon fa fa-check"></i>
+           <label>16:00 - 20:00</label>
+           </div>
+        </div> -->
+      </div>
+    </div>
+    <div class="continue_pay text-center">
+      <a href="javascript:void(0)"><div class="payment_link" class="btn" ng-click="toPaymentMode('delivery_form')"><p>Continue</p></div></a>
+    </div>
+  </form>
+</div>   

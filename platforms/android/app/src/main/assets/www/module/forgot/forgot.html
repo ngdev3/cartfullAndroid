@@ -1,0 +1,39 @@
+<div class="bg" ng-controller="forgot">
+ 
+	 
+	 
+       <!--  <div style = "height:50px;"></div> -->
+        
+        <div class="app_bg">	
+            <div class="cross_btn back_arrow" ><img src="assets/img/header/back_1.png" ng-click="backToLogin()"/></div>
+            <div class="sign-up-div mb-40 mt-100"><a href="javascript:void(0)" class="sign-up">Forgot Password</a></div>
+            <form method="post" name="forgot_pwd" novalidate>
+                <div class="input-container pr-20 pl-20">            
+                    <div class="sign-up-form" id="sign-in">
+                    <input type="number" id="mobile_no" name="mobile_no" ng-model="mobile_no" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" placeholder=" Enter Your Mobile Number" required>
+                    <img src="assets/img/phone.png">
+                    </div>
+                </div>
+                
+            
+                <div class="sign-up-button mt-35">
+                    <a href="javascript:void(0)"><button class="btn" ng-click = "forgot_password('forgot_pwd')">
+                        Submit
+                    </button></a>
+                </div>
+            </form>
+        </div>
+</div>   
+
+<script>
+    /* document.querySelector("#mobile_no").addEventListener("keypress", function (evt) {
+        if (evt.which != 13 && evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57)
+        {
+            evt.preventDefault();
+        }
+    }); */
+    
+    </script>
+
+
+

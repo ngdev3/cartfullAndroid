@@ -1,0 +1,48 @@
+<div class="bg" ng-controller="user_register" ng-init="step2()">
+     <header>
+	  <div class="content-block" > 
+	  <div class="mob-display-cell header-left-section" ng-click="home()">
+	  <i class="fa fa-angle-left" aria-hidden="true">
+	  </i>
+	  </div>
+	  
+	  <div class="header-center-section">
+				<span> interest        </span>
+			</div>
+			<div class="header-right-section"></div>
+			
+	  </div>
+	  </header>
+     <div class="outer_interest30" style="float:left; width:100%">   
+    <div class="content-block">
+	<div style="width:100%; float:left; height:85px;"></div>
+        <div class="row row-width" style="float:left">
+
+            <div class="col-100 center">
+                <p>Select what interest you</p>
+            </div>
+            <div class="col-100 center contect">THE MORE YOU SELECT THE MORE YOU CAN EARN </div>
+        </div>
+        <!--  -----------------------------User-registeration form --------------------------------       -->
+        <form method="post" name="myform" class="form-label" novalidate>
+          <div class="outer-box-div" style="width:100%; float:left; margin-bottom:34px">
+            <div name = "divInterest" id ="divone" class="col-100 custom-selectbox selectok_{{i.interest_id}} abc"  ng-repeat="i in intrest"   style="float:left;">
+                
+                                
+							
+                                <select type="select" ng-model="interests.interest_id[$index]" ng-change = "getIntrest(i.interest_id);" ng-init="interest_id[$index]" name="interest_id[]"  ng-click="to_change(i.interest_id)"  class=" inpSelect selectbox-cus abst"     required>
+                            <option value="">SELECT INTEREST</option>
+                            <option  value="{{x.interest_id}}" ng-repeat="x in intrest" ng-selected="{{x.interest_id}}"> {{x.name}}</option>
+                        </select>
+						 <div ng-if="($index+1)%8=='0' " class="col-100 center contect" style="float:left;">GET EXCLUSIVE DISCOUNT </div>
+                            </div>
+                        </div>
+            
+        </form>
+    </div>
+	</div>
+	 <div class="col-100 fixed-upload-add-btns">
+                <button class="button next" ng-click="user_registration('myform')">Submit </button>
+            </div>
+			
+</div>

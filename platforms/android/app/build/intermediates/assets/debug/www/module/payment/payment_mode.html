@@ -1,0 +1,130 @@
+<style>
+
+.total_savings {
+    padding: 6px 15px 0px 15px;
+}
+
+</style>
+<div class="bg" ng-controller="payment_mode" ng-init="pay_mode()" style="overflow:hidden;">
+  <header class="container-fluid nav-down">
+    <div class="row">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid no-padding">
+          <ul class="nav navbar-nav top_header">
+            <li class="menu_icon back_icon"><a href="javascript:void(0)"><img src="assets/img/header/back.png" alt="menu icon"
+                  ng-click="toDeliveryTime()" /></a></li>
+            <li class="logo_name"><a class="text-left back">Payment</a></li>
+
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+    <!-- MOBILE-MENU-AREA END -->
+  </header>
+
+  <!-- END HEADER -->
+
+  <div class="address mt-50">
+    <h3>Choose your Payment Mode</h3>
+  </div>
+  <form method="post" name="payment_form" novalidate>
+    <div class="mb-20" id="payment_main" style="box-shadow: none;">
+      <!-- <span ng-if="walletdata.orderpaybal_amount !== '0.00'"> -->
+      <div class="pretty p-icon p-round p-pulse payment_div" ng-if="walletdata.orderpaybal_amount !== '0.00'">
+        <input type="radio" ng-model="form.payby" required name="payby" value="card" />
+        <div class="state p-info-o">
+          <i class="icon fa fa-check"></i>
+          <label>Debit Card / Credit Card / Paytm</label>
+        </div>
+      </div>
+
+      <div class="pretty p-icon p-round p-pulse payment_div" ng-if="walletdata.orderpaybal_amount !== '0.00'">
+        <input type="radio" ng-model="form.payby" required name="payby" value="cod" />
+        <div class="state p-info-o">
+          <i class="icon fa fa-check"></i>
+          <label>Cash on Delivery</label>
+        </div>
+      </div>
+      <!-- </span> -->
+
+      <div class="pretty p-icon p-round p-pulse payment_div" ng-if="totalcartdata.walletamount == 0">
+        <input type="checkbox" ng-model="walletchecked" id="walletchecked" required name="walletchecked" value="wallet"
+          ng-click="applywallet()" disabled />
+        <div class="state p-info-o">
+          <i class="icon fa fa-check"></i>
+          <label>Wallet (Avaliable Balance Rs. {{totalcartdata.walletamount}})</label>
+        </div>
+      </div>
+      <div class="pretty p-icon p-round p-pulse payment_div" ng-if="totalcartdata.walletamount > 0">
+        <input type="checkbox" ng-model="walletchecked" id="walletchecked" required name="walletchecked" value="wallet"
+          ng-click="applywallet()" />
+        <div class="state p-info-o">
+          <i class="icon fa fa-check"></i>
+          <label>Wallet (Avaliable Balance Rs. {{totalcartdata.walletamount}})</label>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="price_details fixed_checkout_payment_mode" ng-if="!paymentmode.error">
+      <div class="sub_total">
+        <h3 class="ml-15 mr-15">Sub Total <span>Rs {{shippingCartData.cart_subtotal}}</span></h3>
+      </div>
+      <div class="delivery_charge" ng-if="shippingCartData.shipping_charge != ''">
+        <h3 class="ml-15 mr-15">Shipping and Handling<span>
+            <span ng-if="shippingCartData.shipping_charge !== 'free'" style="float: none;">Rs</span>
+            {{shippingCartData.shipping_charge | ucwords}}</span></h3>
+      </div>
+      <div class="delivery_charge" ng-if="shippingCartData.shipping_charge == ''">
+        <h3 class="ml-15 mr-15">Shipping and Handling<span>
+            <span style="float: none;">Rs</span>
+            0.00</span></h3>
+      </div>
+      <!-- <div class="total_savings">
+        <h3 >Total Savings <span>Rs {{shippingCartData.discount_amt}}</span></h3>
+          </div> -->
+      <div class="delivery_charge" ng-if="couponData.discount_amt > 0">
+        <h3 class="ml-15 mr-15">Discount<span>
+            <span style="float: none;">Rs</span>
+            {{couponData.promodiscount}}</span></h3>
+      </div>
+
+      <div class="" ng-if="walletdata">
+        <h3 class="ml-15 mr-15 wallet_amt" ng-if="!couponData" style="font-size: 15px; text-transform: initial"> Total <span>Rs {{shippingCartData.paymoney}}</span></h3>
+        <h3 class="ml-15 mr-15 wallet_amt" ng-if="couponData">Total <span>Rs {{couponData.paymoney}}</span></h3>
+        
+          
+        <h3 class="ml-15 mr-15 wallet_amt" style=""> Wallet Used Amount <span>Rs {{walletdata.wallet_used_amount}}</span></h3>
+        <div class="total">
+           <h3 class="ml-15 mr-15"  style="font-size: 14px; text-transform: initial"> Total Payable Amount <span>Rs {{walletdata.orderpaybal_amount}}</span></h3>
+        </div>
+
+      </div>
+      <div class="total" ng-if="!walletdata">
+          <h3 class="ml-15 mr-15" ng-if="!couponData" style="font-size: 15px; text-transform: initial"> Total <span>Rs {{shippingCartData.paymoney}}</span></h3>
+          <h3 class="ml-15 mr-15" ng-if="couponData">Total <span>Rs {{couponData.paymoney}}</span></h3>
+      </div>   
+
+
+      <div class="payment_btn">
+        <a href="javascript:void(0)">
+          <div class="back_cart text-left" ng-click="toCart()">
+            <p>View Cart</p>
+          </div>
+        </a>
+        <a href="javascript:void(0)">
+          <div class="payment_link text-right" class="btn" ng-click="tothankyou('payment_form')">
+            <p>Continue</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div ng-if="paymentmode.error" class="payment_error">
+      <h3>No Data...Empty Cart</h3>
+
+    </div>
+  </form>
+</div>
+</div>

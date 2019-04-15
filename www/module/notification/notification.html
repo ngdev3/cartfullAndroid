@@ -1,0 +1,46 @@
+<div ng-controller="notification" ng-init="notify()" >
+<header class="container-fluid nav-down">
+	<div class="row">
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid no-padding">
+			<ul class="nav navbar-nav top_header">
+			  <li class="menu_icon back_icon"><a href="javascript:void(0)"  ><img src="assets/img/header/back.png" ng-click="back()" alt="menu icon" /></a></li>
+			  <li class="logo_name"><a class="text-left back">Notification</a></li>
+			  
+			</ul>
+		  </div>
+		</nav>
+	
+	</div>
+	<!-- MOBILE-MENU-AREA END -->
+</header>
+
+<!-- END HEADER -->    
+     
+	
+	<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 mt-50">
+		    
+			<div class="notification_content" ng-if="notificationdata.length != 0" ng-repeat="x in notificationdata">
+			    <h3>{{x.title}}</h3>
+		        <P>{{x.message}}</P>
+				<div class="notify_date">{{x.createdat}}</div>
+			</div>
+			
+			<div ng-if="notificationdata.length == 0" class="no_data_found">
+				<div class="no_data_main">
+					<img src="img/no_data_found.png">
+				    <p>SORRY</p>
+					<p>{{contentfornodata}}</p>
+				</div>
+
+			</div>
+			
+		</div>
+    </div>
+	
+	
+
+    
+	
+	   
+	

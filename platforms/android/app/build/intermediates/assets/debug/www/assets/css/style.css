@@ -1,0 +1,403 @@
+
+
+.mt-120{margin-top: 120px !important;}
+
+.navbar-inverse {
+    background-color: #a6ce39;
+    margin-bottom: 0;
+    border: none;
+}
+
+/* about_us */
+
+.privacy_policy p {
+    text-align: justify;
+    font-family:Montserrat-Light;
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 1.6em;
+    font-weight: 500;
+	/* margin-top: 50px; */
+}
+
+/* otp */
+
+.sign-up-button > button {
+    width: 80%;
+    background-color: #a6ce39;
+    color: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    font-family: Montserrat-Regular;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+	box-shadow: 0px 0px 3px 1px #89898994;
+}
+
+.button_scc {
+    color: #fff;
+    background-color: #a6ce39;
+    border: none;
+}
+
+.forgot_password a, .resend_otp a {
+    color: #bedb6e;
+    font-family: Montserrat-Light;
+    font-weight: 600;
+}
+
+.enter-otp-head > h3{
+    text-align: center;
+    background-color: #a6ce39;
+    width: 100%;
+    padding: 20px 20px;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 0px;
+	font-weight: 500;
+}
+
+
+
+#otp .digit {
+    width: 85%;
+    margin: 20px auto 10px;
+    text-align: center;
+	float: none;
+}
+
+.digit3s {
+    margin: 0 auto;
+    width: 90%;
+    display: initial;
+}
+
+#otp .digit input {
+    font-size: 17px;
+    width: 12%;
+    text-align: center;
+    color: #1f1f1f;
+    padding: 5px;
+    box-shadow: 0px 0px 3px 0px rgb(212, 212, 212);
+    margin: 8px 8px;
+    letter-spacing: normal !important;
+}
+
+/* ty-page */
+
+.digit3s input {
+	letter-spacing:0px;
+}
+
+
+.ty_main > .ty_logo {
+    text-align: center;
+    margin-top: 135px;
+}
+
+.ty_logo > img{
+	width: 15%;
+}
+
+.ty_main > .order_cnfrm h3 {
+    font-size: 16px;
+    color: #1f1f1f;
+}
+
+.ty_main > .order_cnfrm p {
+    line-height: 2;
+    margin-bottom: 0;
+    color: #1f1f1f;
+}
+
+.ty_main > .order_cnfrm > p > span{
+    color: #a6ce39;
+}
+
+.back_links_order_details{
+	width: 80%;
+    position: relative;
+    background: #fff;
+    top: 60%;
+}
+
+.ty_main > .back_links_order_details > .order_back > a > p {
+    padding: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #a6ce39;
+	border-radius: 5px;
+	font-size: 14px;
+    font-weight: lighter;
+}
+
+.detail-checkout{
+    width: 100%;
+    position: fixed;
+    background: #fff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.order_back_order {
+    width: 80%;
+    display: inline-block;
+    text-align: center;
+	background-color: #a6ce39;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+.order_back_order > a > p {
+	color: #fff;
+}
+
+.close-thank-you {
+    position: absolute;
+    top: -120px;
+    left: 20px;
+}
+
+.close-thank-you img {
+	width:50%;
+}
+
+
+
+
+/* my-address */
+
+.navbar-nav>li.logo_name > a.back {
+    padding-top: 10px;
+    font-family: Montserrat-Regular;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-height: 20px;
+    max-height: 33px;
+}
+
+.my-address{
+	margin-top: 50px !important;
+	box-shadow: 0px 2px 4px 2px #cccccc94;
+	padding: 8px;
+	
+}
+
+.my-address > p {
+    margin-left: 10px;
+	font-family: Montserrat-Light;
+    color: 4f4f4f;
+}
+
+.saved_address {
+    border-bottom: 1px solid #e3e3e3;
+    margin: 6px 10px;
+    background-color: #fff;
+    border-radius: 5px;
+	position: relative;
+}
+
+.edit-my-adress{
+    position: absolute;
+    top: 10px;
+    right: 35px;
+}
+
+.delete-my-adress{
+	position: absolute;
+    top: 10px;
+    right: 0px;
+}
+
+.address_logo > img{
+	width:56%;
+}
+
+.edit-my-adress > a > img{
+	width:56%;
+}
+
+.delete-my-adress > a > img{
+	width:56%;
+}
+
+.address_logo {
+    width: 10%;
+    height: auto;
+    display: table-cell;
+    vertical-align: top;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.address_details > p{
+    font-size: 10px;
+    padding-right: 126px;
+    padding-top: 5px;
+}
+
+.add-new-adress-add {
+    width: 90%;
+    margin-left: 16px;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    padding: 15px;
+}
+
+.add-new-adress-add > a > button {
+	width: 100%;
+    padding: 10px 20px;
+	color: #fff;
+    background-color: #a6ce39;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px #ccc;
+}
+
+/*delivery-address */
+
+.address-delivery h3 {
+    margin-top: 0;
+    padding-top: 15px;
+    font-size: 16px;
+    color: #4f4f4f;
+    font-weight: 500;
+	font-family: Montserrat-Light;
+}
+
+.address-delivery{
+	margin-top: 50px;
+	padding: 5px 10px;
+}
+
+.home-address{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: #f9ffe9;
+    padding: 2px 10px;
+    border: 1px solid #a6ce39;
+}
+
+.home-address > p {
+    font-family: Montserrat-Light;
+    font-size: 12px;
+	color: #8c8f84;
+}
+
+.add-new-address {
+    text-align: center;
+    padding: 25px;
+    width: 100%;
+    bottom:0;
+    position: fixed;
+    background: #fff;
+}
+
+.chng_add a {
+    padding: 15px 40px;
+    background-color: #a6ce39;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 5px;
+	font-weight: 600;
+}
+
+/* order details */
+
+.order_cnfm_order{
+	margin: 0px 10px 0px 10px;
+    padding-top: 5px;
+    padding-bottom: 6px;
+    color: #4f4f4f;
+}
+
+.order-again  {
+    width: 95%;
+    margin: 0 10px 5px 10px;
+    border-radius: 3px;
+    float: left;
+	background-color:none;
+	padding:0px;
+}
+
+.order-again > button {
+    width: 100% !important;
+    border-radius: 5px;
+    padding: 12px 0px 12px 0;
+    text-align: center;
+    font-size: 16px;
+}
+
+.sign-up-button button {
+    background-color: #a6ce39;
+    color: #fff;
+    border: none;
+    font-family: Montserrat-Light;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.total span, .total_saving span {
+    color: #51a900;
+    text-transform: capitalize;
+}
+
+.product_name_orders > h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 20px;
+    max-height: 40px;
+	font-size: 14px;
+    margin: 7px 0;
+    color: #7a7a7a;
+    font-family: Montserrat-Light;
+    min-height: 30px;
+}
+.splash2-bg{
+	background-image: url(../img/splash2-bg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 89vh;
+} 
+
+
+/*refferal*/
+
+.sign-up-form-refferal{
+    box-shadow: 0px 0px 0px 0px;
+}
+.sign-up-form-refferal input{
+    width: 70%;
+    display: inline-block;
+    box-shadow: 1px 3px 20px 1px rgba(0, 0, 0, 0.1);
+}
+.refferal-button{
+    width: 28%;
+    display: inline-block;
+    text-align: right;
+}
+.refferal-button button{
+    border: none;
+    background-color: #a6ce39;
+    color: #fff;
+    padding: 10px 5px;
+    border-radius: 4px;
+}
+
+.refferal-button button.validated{
+    border: none;
+    background-color: #5e7d08;
+    color: #fff;
+    padding: 10px 5px;
+    border-radius: 4px;
+}

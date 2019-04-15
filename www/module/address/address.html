@@ -1,0 +1,64 @@
+<div class="bg" ng-controller="address" ng-init="address_init()">
+
+        <header class="container-fluid nav-down">
+                <div class="row">
+                    <nav class="navbar navbar-inverse">
+                      <div class="container-fluid no-padding">
+                        <ul class="nav navbar-nav top_header">
+                          <li class="menu_icon back_icon"><a href="javascript:void(0)"  ><img ng-click="my_account()"src="assets/img/header/back.png" id="asdf" alt="menu icon" /></a></li>
+                          <li class="logo_name"><a class="text-left back">My Address</a></li>
+                          <li class="cart_icon mr-5">
+                              
+                              <a href="javascript:void(0)"><img src="assets/img/add_address.png" alt="search icon" ng-click="toAddAddress()"/></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </nav>
+                
+                </div>
+                <!-- MOBILE-MENU-AREA END -->
+        </header>
+            
+    <!-- END HEADER -->    
+            
+    <div class="my-address mt-50"><p>Saved Address</p></div>
+    <div class="saved_address pb-20"  ng-repeat="x in address" ng-if = "address"> 
+            <div class="address_logo">
+                <img src="assets/img/address_logo.png">
+            </div>
+            <div class="address_details">
+               <!--  <p>50, New Satguru Nanik Ind Est, 
+                    Western Express Highway, 
+                    Jaycoach, Goregaon( East),   
+                    Mumbai,  Maharashtra, 
+                    400063, India
+                </p> -->
+                <p>
+                        <b style="color:black;" ng-if="x.title == 'other'">{{x.address_title}}</b>
+                        <b style="color:black;" ng-if="x.title != 'other'">{{x.title}}</b><br>
+                        {{x.plot_no + ", " +x.locality}}<br />
+                        {{x.landmark + " " + x.city}}<br />
+                        {{x.state + " " + " " + x.pincode}}
+               </p> 
+               <!-- <a class="edit" ng-click="toEditAddress(x.ad_id)">Edit</a>
+                <a class="delete" ng-click="delete_address(x.ad_id)">Delete</a>  -->
+            </div>
+			
+			<div class="edit-my-adress">
+			    <a class="edit" ng-click="toEditAddress(x.ad_id)"><img src="assets/img/edit-adress.png"></a>
+			</div>
+			<div class="delete-my-adress">
+			    <a class="delete" ng-click="delete_address(x.ad_id)"><img src="assets/img/delete-adress.png"></a>
+			</div>
+			
+    </div>
+	<div class="add-new-adress-add">
+			    <a href="javascript:void(0)" ng-click="toAddAddress()"><button class="add-new-adress-btn">
+                Add Address</button></a>
+			</div>
+	
+    <div ng-if = "!address">
+        <h5>No Address Found!!</h5>
+    </div>
+
+</div>

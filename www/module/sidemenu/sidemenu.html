@@ -1,0 +1,95 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<div ng-controller="sidemenu">
+
+    <header>
+        <div class="content-block">
+
+            <div class="mob-display-cell header-left-section"><i class="fa fa-navicon material-icons" aria-hidden="true" sidebarjs-toggle></i></div>
+            <!--<div class="mob-display-cell"> Movies
+                      <div class="search-bg-relative">
+                        <div class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></div>
+                        <input type="text" placeholder="Search"/>
+                      </div> 
+                    </div>-->
+					 <div class="header-center-section">
+		 <span>Home        </span>
+	 </div>
+	 <div class="header-right-section"></div>
+	 
+	 </div>
+	 </header>
+
+      
+     
+    <!--ng-include src="'module/sidemenu/search.html'"></ng-include-->
+    <sidebarjs>
+        <!-- ng-app="DemoApp"-->
+        <h3> <img src="img/logo.png" width="80" /></h3>
+        <div ng-if="type == '4'">
+            <nav>
+                <div>
+                    <a sidebarjs-toggle href="javascript:void(0)" ng-click="upload_ad();">
+                        <div class="img-watch"> <i class="fa fa-cloud-upload" aria-hidden="true"></i> </div>
+                        <div class="img-watch-text">Upload Ads</div>
+                    </a>
+                    <a sidebarjs-toggle href="javascript:void(0)" ng-click="ads_list_ad()">
+                        <div class="img-watch"> <i class="fa fa-cloud-upload" aria-hidden="true"></i> </div>
+                        <div class="img-watch-text">Ads List</div>
+                    </a>
+                    <a sidebarjs-toggle href="javascript:void(0)" ng-click="update_advertize('')">
+                        <div class="img-watch"><i class="fa fa-pencil" aria-hidden="true"></i></div>
+                        <div class="img-watch-text">Update Information</div>
+                    </a>
+                    <a sidebarjs-toggle ng-click="advertizer_account()" href="javascript:void(0)">
+                        <div class="img-watch"><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+                        <div class="img-watch-text">My Account</div>
+                    </a>
+
+                    <a sidebarjs-toggle ng-click="changepassword()" href="javascript:void(0)">
+                        <div class="img-watch"><i class="fa fa-key" aria-hidden="true"></i></div>
+                        <div class="img-watch-text">Change Password</div>
+                    </a>
+
+                    <a sidebarjs-toggle ng-click="logout()" href="javascript:void(0)">
+                        <div class="img-watch"><i class="fa fa-sign-out" aria-hidden="true"></i></div>
+                        <div class="img-watch-text">Logout</div>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <div ng-if="type == '3'">
+            <nav>
+                <div>
+                    <a sidebarjs-toggle href="javascript:void(0)" ng-click="change_user_interest()">
+                        <div class="img-watch"> <i class="fa fa-star" aria-hidden="true"></i> </div>
+                        <div class="img-watch-text">Change Interests</div>
+                    </a>
+                    <a sidebarjs-toggle href="javascript:void(0)" ng-click="update_user('')">
+                        <div class="img-watch"><i class="fa fa-pencil" aria-hidden="true"></i></div>
+                        <div class="img-watch-text">Update Information</div>
+                    </a>
+                    <a sidebarjs-toggle ng-click="user_account()" href="javascript:void(0)">
+                        <div class="img-watch"><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+                        <div class="img-watch-text">My Account</div>
+                    </a>
+                    <a sidebarjs-toggle ng-click="refer_earn()" href="javascript:void(0)">
+                        <div class="img-watch"><i class="fa fa-money" aria-hidden="true"></i></div>
+                        <div class="img-watch-text">Refer & Earn</div>
+                    </a>
+                    <a sidebarjs-toggle ng-click="changepassword()" href="javascript:void(0)">
+                        <div class="img-watch"><i class="fa fa-key" aria-hidden="true"></i></div>
+                        <div class="img-watch-text">Change Password</div>
+                    </a>
+
+                    <a sidebarjs-toggle ng-click="logout()" href="javascript:void(0)">
+                        <div class="img-watch"><i class="fa fa-sign-out" aria-hidden="true"></i></div>
+                        <div class="img-watch-text">Logout</div>
+                    </a>
+
+
+                </div>
+            </nav>
+        </div>
+    </sidebarjs>
+</div>
+   </div>

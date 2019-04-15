@@ -1,0 +1,4 @@
+#Thu Mar 28 13:58:39 IST 2019
+base.0=J\:\\xampp\\htdocs\\Projects2018\\backup\\AamariApp\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex

@@ -1,0 +1,858 @@
+<style>
+    #slides_control>div {
+        height: auto;
+    }
+
+    img {
+        margin: auto;
+        width: auto;
+        height: auto;
+    }
+
+    #slides_control {
+        position: relative;
+        width: 100%;
+
+    }
+
+    .carousel-control.right {
+        background-image: none !important;
+        color: #000 !important;
+    }
+
+    .carousel-control.left {
+        background-image: none !important;
+        color: #000 !important;
+    }
+
+    .carousel-indicators li {
+        border: 1px solid #000 !important;
+    }
+
+    .carousel-indicators {
+        bottom: -5px !important;
+    }
+
+    .carousel-indicators .active {
+
+        margin-right: 6px;
+        background-color: #666;
+    }
+
+    .carousel-indicators li {
+        margin-right: 6px;
+    }
+
+    /** Controls **/
+
+    .carousel-control .glyphicon-chevron-right,
+    .carousel-control .icon-next {
+        right: 50%;
+        margin-right: -10px;
+        opacity: 0;
+    }
+
+    .carousel-control .glyphicon-chevron-left,
+    .carousel-control .icon-prev {
+        left: 50%;
+        margin-left: -10px;
+        opacity: 0;
+    }
+
+    a.left.carousel-control {
+        position: absolute;
+        top: 50%;
+        z-index: 5;
+        display: inline-block;
+        margin-top: -10px;
+
+
+        margin-left: -10px;
+    }
+
+    a.right.carousel-control {
+
+        margin-right: -10px;
+        position: absolute;
+        top: 50%;
+        z-index: 5;
+        display: inline-block;
+        margin-top: -10px;
+    }
+
+    #autocomplete {
+        width: 100%;
+    }
+    .section-heading {
+    color: #51a900;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    margin-left: 10px;
+    padding: 10px 0 10;
+    text-transform: capitalize;
+    display: inline-block;
+    width: 70%;
+    letter-spacing: 1px;
+}
+li.express_delivery_cab{
+ background-color: #ff5046;
+}
+li.express_delivery_cab span{
+display: inline-block;
+    padding: 5px 16px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #fff;
+}
+li.express_delivery_cab a{
+   padding: 10px 0;
+}
+
+    /** ! controls **/
+.footer_slider{
+    padding: 10px 0px;
+    background: #ffffff;
+}
+.footer_slider .slick-slide{
+    margin: 10px 5px;
+    /* border: 1px solid rgba(192, 189, 189, 0.73); */
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.3803921568627451);
+}
+</style>
+<div class="bg" ng-controller="home" ng-init="list_category()" id="containernew">
+    <div style='display:none;' class="homes"></div>
+    <div id="mySidenav" class="sidenav" onclick="openNav()">
+        <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
+        <ul class="side_nav">
+            <li ng-if="loggedin">
+                <a href="javascript:void(0)" ng-if="image != ''"><img class="profle_img" src="{{image}}" alt="" ng-click="toLocationFetch()">
+                    <span>
+                        <h4>Hello, {{username | ucwords}}</h4>
+                    </span>
+                </a>
+                <a href="javascript:void(0)" ng-if="image == ''"><img class="profle_img" src="assets/img/user_placeholder.png" alt="" ng-click="toLocationFetch()">
+                    <span>
+                        <h4>Hello, {{username | ucwords}}</h4>
+                    </span>
+                </a>
+				<div class="edit-profile-sidenav">
+				    <a href="javascript:void(0)" ng-click= "toprofile()"><i class="fa fa-pencil" aria-hidden="true"></i><span>Edit</span></a>
+				</div>
+            </li>
+            <li ng-if="!loggedin">
+                <a href="javascript:void(0)" ><img class="profle_img" src="assets/img/user_placeholder.png" alt="" ng-click="toLocationFetch()">
+                    <span>
+                        <h4>Welcome Guest</h4>
+                    </span>
+                </a>
+            </li>
+			<li class="express_delivery_cab"><a href="javascript:void(0)"><span>Express Delivery <img src="assets/img/expressdelivercab.png" alt="" style="
+    width: 19%;
+"></span></a></li>
+
+            <li ng-click="home()"><a href="javascript:void(0)"><img src="assets/img/icon/home.png" alt=""> <span>Home</span></a></li>
+            <!-- <li><a href="javascript:void(0)"><img src="assets/img/icon/category.png" alt=""> <span ng-click="notification()">Notification</span></a></li> -->
+            <li ng-click="category()"><a href="javascript:void(0)"><img src="assets/img/icon/account.png" alt=""> <span>All
+                        Categories</span></a></li>
+            <li ng-click="useroffers()"><a href="javascript:void(0)"><img src="assets/img/icon/offer.png" alt=""> <span>Offers</span></a></li>
+            <!-- <li><a href="javascript:void(0)"><img src="assets/img/icon/hot_deals.png" alt=""> <span ng-click="hot_deals()">Hot Deals</span></a></li> -->
+            <li ng-click="about_us()"><a href="javascript:void(0)"><img src="assets/img/icon/about_us.png" alt=""> <span>About Us</span></a></li>
+            <li ng-click="policy()"><a href="javascript:void(0)"><img src="assets/img/icon/privacy_policy.png" alt=""> <span>Privacy Policy</span></a></li>
+            <li ng-click="contact_us()"><a href="javascript:void(0)"><img src="assets/img/icon/contact_us.png" alt=""> <span>Contact Us</span></a></li>
+            <!--<li><a href="javascript:void(0)"><img src="assets/img/icon/login.png" alt=""> <span>Skin Care</span></a></li>
+            <li><a href="javascript:void(0)"><img src="assets/img/icon/login.png" alt=""> <span>Diapering</span></a></li> -->
+            <li ng-if="loggedin" ng-click="signout()"><a href="javascript:void(0)"><img src="assets/img/icon/login.png" alt=""> <span>Logout</span></a></li>
+            <li  ng-if="!loggedin" ng-click="signout()"><a href="javascript:void(0)"><img src="assets/img/icon/login.png" alt=""> <span>Login</span></a></li>
+        </ul>
+    </div>
+    <div id="main" style="width: 100%;">
+        <header class="container-fluid nav-down">
+            <div class="row">
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid no-padding">
+                        <ul class="nav navbar-nav top_header">
+                            <li class="menu_icon "><a href="javascript:void(0);"><img onclick="openNav()" src="assets/img/header/ham_icon.png"
+                                        id="asdf" alt="menu icon" /></a></li>
+                            <li class="logo_name "><a href="javascript:void(0);" class="text-left ">
+                                    <span>
+                                        <!-- <input type="text" placeholder="Select Location..." id="address_bar" value="B-88 Sector 54, noida" /> -->
+                                        <input type="text" value="{{store_location}}" readonly ng-click="toLocationFetch()">
+                                    </span>
+                                    <img src="assets/img/header/pencil.png" alt="" id="pencil_icon" ng-click="toLocationFetch()" /></a>
+                            </li>
+                            <li class="cart_icon">
+                                <a href="javascript:void(0)" ng-if="loggedin"><img ng-click="my_account()" src="assets/img/header/user_icon.png"
+                                        alt="heart icon" /></a>
+                                <a href="javascript:void(0)"><img ng-click="opencart()" src="assets/img/header/cart_icon.png"
+                                        alt="cart icon" style="width: 15px;" /><span class="badge">{{activeCartValue}}</span></a>
+                                <a href="javascript:void(0);"><img src="assets/img/header/search_icon.png" ng-click="check_list()" alt="search icon" /></a>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav bottom_header">
+                            <li class="menu_search_container"><a href="javascript:void(0);">
+                                    <img src="assets/img/header/search_icon.png" alt="cart icon" />
+                                    <input type="text" ng-keyup="searchbar()" ng-model="search" class="menu_search"
+                                        placeholder="Search products brands and more" />
+                                        <button class="search_bar_span" ng-click="searchtoproducts(search)"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+
+                                </a>
+
+                            </li>
+                        </ul>
+                        <div id="main_div1">
+                            <ul class="search_list">
+                            
+                                <!-- <li ng-if="enableDiv">
+                                    Showing result for "{{search}}" {{total_record}} records found
+                                </li> -->
+                                <li class="search_list_li" ng-repeat="x in searchresult" ng-click="product_view(x.pid)" ng-if="enableDiv">
+                                    <div class="search_img" ng-if= "x.pimage">
+                                        <img src="{{x.pimage}}">
+                                    </div>
+                                    <div class="search_img" ng-if= "!x.pimage">
+                                        <img src="assets/img/product_placeholder1.png">
+                                    </div>
+                                    <div class="search_name"><span>{{x.product_name |limitTo : 35}}{{x.product_name.length
+                                            > 35 ? '...' : ''}}</span></div>
+                                </li>
+                            
+                                <li class="search_list_li" ng-if="resultstatus">
+                                    <div class="search_name" style="width: 100%; padding-left: 5px;display: block;text-align: center"><span>Typing</span>
+                                        <img src="img/loading21.gif" alt="" style="height: 6px;"></div>
+                                </li>
+                                <li class="search_list_li" ng-if="datanotfound">
+                                    <div class="search_name" style="    width: 100%;padding-left: 5px; display: block; text-align: center"><span>Not
+                                            Found </span><br>
+                                        <img src="img/notfoundemogi.gif" alt="" style="height: 25px;">
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+            <!-- MOBILE-MENU-AREA END -->
+        </header>
+        <!-- END HEADER -->
+
+        <!--  START Banner SLIDER -->
+        <div class="container-fluid">
+            <div class="row">
+                <div id="banner_slider">
+                    <!-- <div class="item">
+                    <div class="banner-img">
+                        <img src="assets/img/banner/banner_01.png" alt="banner 1" />
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="banner-img">
+                        <img src="assets/img/banner/banner_01.png" alt="banner 2" />
+                    </div>
+                </div>
+                <div class="item" ng-init="slider()">
+                    <div class="banner-img" ng-repeat="slide in slider">
+                        <img ng-src="{{slide.androidbanner}}+{{slide.image}}" alt="banner 3" />
+                    </div>
+                </div> -->
+                    <div id="slides_control" ng-init="slider()">
+                        <div style="">
+                           <!--  <carousel interval="myInterval">
+                                <slide ng-repeat="slide in slider" active="slide.active" ng-init=" image = '{{slide.androidbanner}}{{slide.image}}'">
+                                    <img ng-if="sliderCount != 0" ng-click="categorydetails(slide.category)" style="height: 130px; width: 100%;" ng-src="{{slide.androidbanner}}{{slide.image}}">
+                                    <img ng-if="sliderCount == 0" style="height: 130px; width: 375px;" ng-src="assets/img/banner/banner_01.png">
+                                    <!-- <div ng-if="!image">
+                                </div> -->
+                                    <!-- <div class="carousel-caption">
+                                        <h4>Slide {{sliderCount}}</h4>
+                                    </div> -->
+                                <!--</slide>
+                                <a class="left carousel-control" ng-click="prev()" ng-show="slides.length > 1"><i class="fa fa-chevron-left"
+                                        aria-hidden="true"></i></a>
+                                <a class="right carousel-control" ng-click="next()" ng-show="slides.length > 1"><i
+                                        class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                            </carousel> -->
+                            <!--  START Banner SLIDER -->
+        <div class="container-fluid" >
+            <div class="row">
+                <div id="banner_slider">
+                    <div id="slides_control">
+                        <div>
+                            <slick class="slider" settings="slickConfig1">
+                                <div ng-repeat="slide in slider" ng-click="categorydetails(slide.category)">
+                                    <!-- <div class="thumb_img" ng-include="slider-top"> -->
+                                        <img  class="slide_image" ng-src="{{slide.androidbanner}}">
+                                    <!-- </div> -->
+                                </div>
+                            </slick>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  END Banner SLIDER -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  END Banner SLIDER -->
+
+        <!--  START advertisement Section -->
+        <!--
+        <div class="container-fluid animatedParent animateOnce">
+            <div class="row">
+                <div id="adv_1">
+                    <a href="javascript:void(0);">
+                        <div class="category-img">
+                            <img src="assets/img/banner/advertise_01.png" alt="" class="animated fadeInDown slow" />
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+-->
+        <!--  END advertisement Section -->
+
+
+        <!--  4 Box Banner STARTS   -->
+
+        <!-- <div class="container-fluid m-top animatedParent animateOnce ad-rock-1">
+            <div class="row ad-row-rock-2">
+                <div class="col-xs-6 ad-rock-3 "><img src="assets/img/ad-banner-1.jpg" alt=""></div>
+                <div class="col-xs-6 ad-rock-3"><img src="assets/img/ad-banner-2.jpg" alt=""></div>
+            </div>
+        </div> -->
+
+        <!--  START Banner SLIDER -->
+        <!-- <div class="container-fluid">
+            <div class="row">
+                <div id="banner_slider">
+                    <div id="slides_control">
+                        <div>
+                            <slick class="slider" settings="slickConfig0">
+                                <div ng-repeat="slide in sliderSajal">
+                                        <img style="height: 157px;
+                                        width: 162px;" class="slide_image" ng-src="{{slide}}">
+                                </div>
+                            </slick>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!--  END Banner SLIDER -->
+
+        
+        <!--  4 Box Banner STARTS   -->
+
+
+
+
+
+        <div class="container-fluid m-top animatedParent animateOnce" ng-if="catgory_list_c">
+            <div class="row">
+                <div id="catg_slider">
+
+                    <div class="section-heading">
+                        <p>{{catgory_list_c_name}}</p>
+                    </div>
+                    <div class="section-heading-view">
+                        <a href="javascript:void(0);" ng-click="product_list(catdata21.id, catdata21.name)">View all</a>
+                    </div>
+                  
+<div class="container-fluid" >
+<div class="row">
+    <div id="product_slider1">
+        <div id="slides_control">
+            <div>
+                <slick class="slider" settings="slickConfig2">
+                    <div class="col-sm-4 col-xs-6 pl-5 pr-5 animated fadeInLeft slow" ng-repeat="product in catgory_list_c" >
+                        <div class="product_container mt-10">
+                            <div class="prod_img_container">
+                                <img src="{{product.pimage}}" alt="product image 1" class="img-responsive" ng-click="product_view(product.pid)" />
+                            </div>
+                            <div class="prod_img_container" ng-if="!product.pimage">
+                                <img src="assets/img/category/product_placeholder1.png" alt="product image 1" class="img-responsive" ng-click="product_view(product.pid)" />
+                            </div>
+                             <div class="prod_content">
+        
+                                <h2 class="mb-15" ng-click="product_view(product.pid)">{{product.product_name}}</h2>
+                                
+                                <div class="product_wgt">
+                                    <input type="hidden" name="product" ng-model="product.selectedOption.weight" ng-click="update($event)">
+                                    <select ng-model="product.selectedOption.price" id="product_{{product.pid}}" name="product.selectedOption.price"
+                                     ng-change="getvalueforOtherVarient(product.pid, $(this).val())" class="select_weight" ng-init=" product.selectedOption.p_price = product.weight_data[0].p_price; product.selectedOption.weight = product.weight_data[0].weight_id; product.selectedOption.price = (product.weight_data[0].discount !== 0) ? product.weight_data[0].s_price : product.weight_data[0].showable_price; product.selectedOption.added = product.weight_data[0].added; product.selectedOption.addedQnty = product.weight_data[0].addedQnty; product.selectedOption.stock_type = product.weight_data[0].stock_type; product.selectedOption.stock_value = product.weight_data[0].stock_value; ">
+                                        <option ng-repeat="weight in product.weight_data" ng-selected="{{product.selectedOption.weight == weight.weight_id}}"
+                                         ng-value="weight.discount !== 0 ? weight.s_price : weight.showable_price" data-weight_id="{{weight.weight_id}}"
+                                         data-added="{{weight.added}}" data-addedQnty="{{weight.addedQnty}}" data-stock_value="{{weight.stock_value}}"
+                                         data-stock_type="{{weight.stock_type}}" data-showable_price="{{weight.showable_price}}" data-product_id="{{product.pid}}">{{weight.p_weight}}
+                                        </option>
+                                    </select>
+        
+                                </div>
+                                <p class="prod_price">
+                                    Rs. {{product.selectedOption.price}}
+        
+                                </p> 
+                                 
+                                <div class="add_item_container" id="firstt_{{product.pid}}" data-attr="{{product.selectedOption.weight}}">
+        
+                                    <div class=" add_item_button" id="enableCart_{{product.selectedOption.weight}}" ng-show="product.weight_data[0].added != 'no'">
+                                        <button class="less_item" data-weightid="{{product.selectedOption.weight}}" id="minus_{{product.selectedOption.weight}}"
+                                         ng-click="minusToCart($event)">-</button>
+                                        <input type="text" id="quantity_{{product.selectedOption.weight}}" value="{{product.weight_data[0].addedQnty}}"
+                                         disabled="">
+                                        <button class="add_item" data-weightid="{{product.selectedOption.weight}}" id="plus_{{product.selectedOption.weight}}"
+                                         ng-click="plusToCart($event)">+</button>
+                                    </div>
+        
+                                    <input type="hidden" value="{{currentval}}" name="cartcurrentquant">
+        
+                                    <div class="add_cart_button" id="addToCart_{{product.selectedOption.weight}}" ng-show="product.weight_data[0].added != 'yes' && (product.stock_value != '0,' || product.stock_type == 'unlimited,')">
+                                        <button class="addcart_button" data-weightid="{{product.selectedOption.weight}}" id="addCart_{{product.selectedOption.weight}}"
+                                         ng-click="addToCart($event);">Add
+                                            to cart</button>
+                                    </div>
+                                    <div class="out_stock_button" ng-if="product.stock_value == '0,' && product.stock_type != 'unlimited,'">
+                                        <button class="addcart_button" >Out of Stock</button>
+                                    </div>
+        
+                                </div>
+                            </div>
+                            <div class="prod_discount" ng-if="product.discount !== '0'">
+                                <div class="disc_badge">
+                                    <span>{{product.discount}}%</span>
+                                </div>
+                            </div>
+                        </div>
+        
+        
+                    </div> 
+
+                </slick>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+                </div>
+            </div>
+        </div>
+
+        <!--  START Category Section -->
+        
+        <!--  END  Category Section -->
+
+        <!--  START Advertisement Section -->
+        <div class="container-fluid animatedParent animateOnce">
+            <div class="row">
+                <div id="adv_2" class="mb-5" ng-click="product_list(banner_top_data.category,banner_top_data.name)">
+                    <a href="javascript:void(0);">
+                        <div class="category-img" ng-if="banner_top_data.app_image">
+                            <img src="{{banner_top_data.image_url}}{{banner_top_data.app_image}}" alt="" class="animated fadeInUp slow" />
+                        </div>
+                        <div class="category-img" ng-if="!banner_top_data.app_image">
+                            <img src="assets/img/amari_placeholder.png" alt="" class="animated fadeInUp slow" />
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--  END Advertisement Section  -->
+
+        
+        
+        <div class="container-fluid m-top animatedParent animateOnce" ng-if="catgory_list_b">
+            <div class="row">
+                <div id="catg_slider">
+
+                    <div class="section-heading">
+                        <p>{{catgory_list_b_name}}</p>
+                    </div>
+                    <div class="section-heading-view">
+                        <a href="javascript:void(0);" ng-click="product_list(catdata4.id, catdata4.name)">View all</a>
+                    </div>
+
+<div class="container-fluid" >
+<div class="row">
+    <div id="product_slider2">
+        <div id="slides_control">
+            <div>
+                <slick class="slider" settings="slickConfig2">
+                    <div class="col-sm-4 col-xs-6 pl-5 pr-5 animated fadeInLeft slow" ng-repeat="product in catgory_list_b" >
+                        <div class="product_container mt-10">
+                            <div class="prod_img_container">
+                                <img src="{{product.pimage}}" alt="product image 1" class="img-responsive" ng-click="product_view(product.pid)" />
+                            </div>
+                            <div class="prod_img_container" ng-if="!product.pimage">
+                                <img src="assets/img/category/product_placeholder1.png" alt="product image 1" class="img-responsive" ng-click="product_view(product.pid)" />
+                            </div>
+                             <div class="prod_content">
+        
+                                <h2 class="mb-15" ng-click="product_view(product.pid)">{{product.product_name}}</h2>
+                                
+                                <div class="product_wgt">
+                                    <input type="hidden" name="product" ng-model="product.selectedOption.weight" ng-click="update($event)">
+                                    <select ng-model="product.selectedOption.price" id="product_{{product.pid}}" name="product.selectedOption.price"
+                                     ng-change="getvalueforOtherVarient(product.pid, $(this).val())" class="select_weight" ng-init=" product.selectedOption.p_price = product.weight_data[0].p_price; product.selectedOption.weight = product.weight_data[0].weight_id; product.selectedOption.price = (product.weight_data[0].discount !== 0) ? product.weight_data[0].s_price : product.weight_data[0].showable_price; product.selectedOption.added = product.weight_data[0].added; product.selectedOption.addedQnty = product.weight_data[0].addedQnty; product.selectedOption.stock_type = product.weight_data[0].stock_type; product.selectedOption.stock_value = product.weight_data[0].stock_value; ">
+                                        <option ng-repeat="weight in product.weight_data" ng-selected="{{product.selectedOption.weight == weight.weight_id}}"
+                                         ng-value="weight.discount !== 0 ? weight.s_price : weight.showable_price" data-weight_id="{{weight.weight_id}}"
+                                         data-added="{{weight.added}}" data-addedQnty="{{weight.addedQnty}}" data-stock_value="{{weight.stock_value}}"
+                                         data-stock_type="{{weight.stock_type}}" data-showable_price="{{weight.showable_price}}" data-product_id="{{product.pid}}">{{weight.p_weight}}
+                                        </option>
+                                    </select>
+        
+                                </div>
+                                <p class="prod_price">
+                                    Rs. {{product.selectedOption.price}}
+        
+                                </p> 
+                                 
+                                <div class="add_item_container" id="firstt_{{product.pid}}" data-attr="{{product.selectedOption.weight}}">
+        
+                                    <div class=" add_item_button" id="enableCart_{{product.selectedOption.weight}}" ng-show="product.weight_data[0].added != 'no'">
+                                        <button class="less_item" data-weightid="{{product.selectedOption.weight}}" id="minus_{{product.selectedOption.weight}}"
+                                         ng-click="minusToCart($event)">-</button>
+                                        <input type="text" id="quantity_{{product.selectedOption.weight}}" value="{{product.weight_data[0].addedQnty}}"
+                                         disabled="">
+                                        <button class="add_item" data-weightid="{{product.selectedOption.weight}}" id="plus_{{product.selectedOption.weight}}"
+                                         ng-click="plusToCart($event)">+</button>
+                                    </div>
+        
+                                    <input type="hidden" value="{{currentval}}" name="cartcurrentquant">
+        
+                                    <div class="add_cart_button" id="addToCart_{{product.selectedOption.weight}}" ng-show="product.weight_data[0].added != 'yes' && (product.stock_value != '0,' || product.stock_type == 'unlimited,')">
+                                        <button class="addcart_button" data-weightid="{{product.selectedOption.weight}}" id="addCart_{{product.selectedOption.weight}}"
+                                         ng-click="addToCart($event);">Add
+                                            to cart</button>
+                                    </div>
+                                    <div class="out_stock_button" ng-if="product.stock_value == '0,' && product.stock_type != 'unlimited,'">
+                                        <button class="addcart_button" >Out of Stock</button>
+                                    </div>
+        
+                                </div>
+                            </div>
+                            <div class="prod_discount" ng-if="product.discount !== '0'">
+                                <div class="disc_badge">
+                                    <span>{{product.discount}}%</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+
+                </slick>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+                </div>
+            </div>
+        </div>
+
+
+        
+        
+        <!--  START Advertisement Section -->
+        <div class="container-fluid animatedParent animateOnce">
+            <div class="row">
+                <div id="adv_2" class="mb-5" ng-click="product_list(banner_left_data.category,banner_left_data.name)">
+                    <a href="javascript:void(0);">
+                        <div class="category-img" ng-if="banner_left_data.app_image">
+                            <img src="{{banner_left_data.image_url}}{{banner_left_data.app_image}}" alt="" class="animated fadeInUp slow" />
+                        </div>
+                        <div class="category-img" ng-if="!banner_left_data.app_image">
+                            <img src="assets/img/amari_placeholder.png" alt="" class="animated fadeInUp slow" />
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--  END Advertisement Section  -->
+        
+        
+        <div class="container-fluid m-top animatedParent animateOnce" ng-if="catgory_list_a">
+            <div class="row">
+                <div id="catg_slider">
+
+                    <div class="section-heading">
+                        <p>{{catgory_list_a_name}}</p>
+                    </div>
+                    <div class="section-heading-view">
+                        <a href="javascript:void(0);" ng-click="product_list(catdata1.id, catdata1.name)">View all</a>
+                    </div>
+                    
+<div class="container-fluid" >
+<div class="row">
+    <div id="product_slider3">
+        <div id="slides_control">
+            <div>
+                <slick class="slider" settings="slickConfig2">
+                    <div class="col-sm-4 col-xs-6 pl-5 pr-5 animated fadeInLeft slow" ng-repeat="product in catgory_list_a" >
+                        <div class="product_container mt-10">
+                            <div class="prod_img_container">
+                                <img src="{{product.pimage}}" alt="product image 1" class="img-responsive" ng-click="product_view(product.pid)" />
+                            </div>
+                            <div class="prod_img_container" ng-if="!product.pimage">
+                                <img src="assets/img/category/product_placeholder1.png" alt="product image 1" class="img-responsive" ng-click="product_view(product.pid)" />
+                            </div>
+                             <div class="prod_content">
+        
+                                <h2 class="mb-15" ng-click="product_view(product.pid)">{{product.product_name}}</h2>
+                                
+                                <div class="product_wgt">
+                                    <input type="hidden" name="product" ng-model="product.selectedOption.weight" ng-click="update($event)">
+                                    <select ng-model="product.selectedOption.price" id="product_{{product.pid}}" name="product.selectedOption.price"
+                                     ng-change="getvalueforOtherVarient(product.pid, $(this).val())" class="select_weight" ng-init=" product.selectedOption.p_price = product.weight_data[0].p_price; product.selectedOption.weight = product.weight_data[0].weight_id; product.selectedOption.price = (product.weight_data[0].discount !== 0) ? product.weight_data[0].s_price : product.weight_data[0].showable_price; product.selectedOption.added = product.weight_data[0].added; product.selectedOption.addedQnty = product.weight_data[0].addedQnty; product.selectedOption.stock_type = product.weight_data[0].stock_type; product.selectedOption.stock_value = product.weight_data[0].stock_value; ">
+                                        <option ng-repeat="weight in product.weight_data" ng-selected="{{product.selectedOption.weight == weight.weight_id}}"
+                                         ng-value="weight.discount !== 0 ? weight.s_price : weight.showable_price" data-weight_id="{{weight.weight_id}}"
+                                         data-added="{{weight.added}}" data-addedQnty="{{weight.addedQnty}}" data-stock_value="{{weight.stock_value}}"
+                                         data-stock_type="{{weight.stock_type}}" data-showable_price="{{weight.showable_price}}" data-product_id="{{product.pid}}">{{weight.p_weight}}
+                                        </option>
+                                    </select>
+        
+                                </div>
+                                <p class="prod_price">
+                                    Rs. {{product.selectedOption.price}}
+        
+                                </p> 
+                                 
+                                <div class="add_item_container" id="firstt_{{product.pid}}" data-attr="{{product.selectedOption.weight}}">
+        
+                                    <div class=" add_item_button" id="enableCart_{{product.selectedOption.weight}}" ng-show="product.weight_data[0].added != 'no'">
+                                        <button class="less_item" data-weightid="{{product.selectedOption.weight}}" id="minus_{{product.selectedOption.weight}}"
+                                         ng-click="minusToCart($event)">-</button>
+                                        <input type="text" id="quantity_{{product.selectedOption.weight}}" value="{{product.weight_data[0].addedQnty}}"
+                                         disabled="">
+                                        <button class="add_item" data-weightid="{{product.selectedOption.weight}}" id="plus_{{product.selectedOption.weight}}"
+                                         ng-click="plusToCart($event)">+</button>
+                                    </div>
+        
+                                    <input type="hidden" value="{{currentval}}" name="cartcurrentquant">
+        
+                                    <div class="add_cart_button" id="addToCart_{{product.selectedOption.weight}}" ng-show="product.weight_data[0].added != 'yes' && (product.stock_value != '0,' || product.stock_type == 'unlimited,')">
+                                        <button class="addcart_button" data-weightid="{{product.selectedOption.weight}}" id="addCart_{{product.selectedOption.weight}}"
+                                         ng-click="addToCart($event);">Add
+                                            to cart</button>
+                                    </div>
+                                    <div class="out_stock_button" ng-if="product.stock_value == '0,' && product.stock_type != 'unlimited,'">
+                                        <button class="addcart_button" >Out of Stock</button>
+                                    </div>
+        
+                                </div>
+                            </div>
+                            <div class="prod_discount" ng-if="product.discount !== '0'">
+                                <div class="disc_badge">
+                                    <span>{{product.discount}}%</span>
+                                </div>
+                            </div>
+                        </div>
+        
+        
+                    </div>
+                </slick>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+         <!--  START Advertisement Section -->
+         <div class="container-fluid animatedParent animateOnce">
+            <div class="row">
+                <div id="adv_2" class=""  ng-click="product_list(banner_bottom_data.category,banner_bottom_data.name)">
+                    <a href="javascript:void(0);">
+                        <div class="category-img" ng-if="banner_bottom_data.app_image">
+                            <img src="{{banner_bottom_data.image_url}}{{banner_bottom_data.app_image}}" alt="" class="animated fadeInUp slow" />
+                        </div>
+                        <div class="category-img" ng-if="!banner_bottom_data.app_image">
+                            <img src="assets/img/amari_placeholder.png" alt="" class="animated fadeInUp slow" />
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--  END Advertisement Section  -->
+       
+        <div class="container-fluid m-top animatedParent animateOnce" ng-if="catgory_list_d">
+            <div class="row">
+                <div id="catg_slider">
+
+                    <div class="section-heading">
+                        <p>{{catgory_list_d_name}}</p>
+                    </div>
+                    <div class="section-heading-view">
+                        <a href="javascript:void(0);" ng-click="product_list(catdata10.id, catdata10.name)">View all</a>
+                    </div>
+<div class="container-fluid" >
+<div class="row">
+    <div id="product_slider4">
+        <div id="slides_control">
+            <div>
+                <slick class="slider" settings="slickConfig2">                   
+
+                    <div class="col-sm-4 col-xs-6 pl-5 pr-5 animated fadeInLeft slow" ng-repeat="product in catgory_list_d" >
+                        <div class="product_container mt-10">
+                            <div class="prod_img_container">
+                                <img src="{{product.pimage}}" alt="product image 1" class="img-responsive" ng-click="product_view(product.pid)" />
+                            </div>
+                            <div class="prod_img_container" ng-if="!product.pimage">
+                                <img src="assets/img/category/product_placeholder1.png" alt="product image 1" class="img-responsive" ng-click="product_view(product.pid)" />
+                            </div>
+                             <div class="prod_content">
+        
+                                <h2 class="mb-15" ng-click="product_view(product.pid)">{{product.product_name}}</h2>
+                                
+                                <div class="product_wgt">
+                                    <input type="hidden" name="product" ng-model="product.selectedOption.weight" ng-click="update($event)">
+                                    <select ng-model="product.selectedOption.price" id="product_{{product.pid}}" name="product.selectedOption.price"
+                                     ng-change="getvalueforOtherVarient(product.pid, $(this).val())" class="select_weight" ng-init=" product.selectedOption.p_price = product.weight_data[0].p_price; product.selectedOption.weight = product.weight_data[0].weight_id; product.selectedOption.price = (product.weight_data[0].discount !== 0) ? product.weight_data[0].s_price : product.weight_data[0].showable_price; product.selectedOption.added = product.weight_data[0].added; product.selectedOption.addedQnty = product.weight_data[0].addedQnty; product.selectedOption.stock_type = product.weight_data[0].stock_type; product.selectedOption.stock_value = product.weight_data[0].stock_value; ">
+                                        <option ng-repeat="weight in product.weight_data" ng-selected="{{product.selectedOption.weight == weight.weight_id}}"
+                                         ng-value="weight.discount !== 0 ? weight.s_price : weight.showable_price" data-weight_id="{{weight.weight_id}}"
+                                         data-added="{{weight.added}}" data-addedQnty="{{weight.addedQnty}}" data-stock_value="{{weight.stock_value}}"
+                                         data-stock_type="{{weight.stock_type}}" data-showable_price="{{weight.showable_price}}" data-product_id="{{product.pid}}">{{weight.p_weight}}
+                                        </option>
+                                    </select>
+        
+                                </div>
+                                <p class="prod_price">
+                                    Rs. {{product.selectedOption.price}}
+        
+                                </p> 
+                                 
+                                <div class="add_item_container" id="firstt_{{product.pid}}" data-attr="{{product.selectedOption.weight}}">
+        
+                                    <div class=" add_item_button" id="enableCart_{{product.selectedOption.weight}}" ng-show="product.weight_data[0].added != 'no'">
+                                        <button class="less_item" data-weightid="{{product.selectedOption.weight}}" id="minus_{{product.selectedOption.weight}}"
+                                         ng-click="minusToCart($event)">-</button>
+                                        <input type="text" id="quantity_{{product.selectedOption.weight}}" value="{{product.weight_data[0].addedQnty}}"
+                                         disabled="">
+                                        <button class="add_item" data-weightid="{{product.selectedOption.weight}}" id="plus_{{product.selectedOption.weight}}"
+                                         ng-click="plusToCart($event)">+</button>
+                                    </div>
+        
+                                    <input type="hidden" value="{{currentval}}" name="cartcurrentquant">
+        
+                                    <div class="add_cart_button" id="addToCart_{{product.selectedOption.weight}}" ng-show="product.weight_data[0].added != 'yes' && (product.stock_value != '0,' || product.stock_type == 'unlimited,')">
+                                        <button class="addcart_button" data-weightid="{{product.selectedOption.weight}}" id="addCart_{{product.selectedOption.weight}}"
+                                         ng-click="addToCart($event);">Add
+                                            to cart</button>
+                                    </div>
+                                    <div class="out_stock_button" ng-if="product.stock_value == '0,' && product.stock_type != 'unlimited,'">
+                                        <button class="addcart_button" >Out of Stock</button>
+                                    </div>
+        
+                                </div>
+                            </div>
+                            <div class="prod_discount" ng-if="product.discount !== '0'">
+                                <div class="disc_badge">
+                                    <span>{{product.discount}}%</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+                </slick>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid" >
+            <div class="row">
+                <div id="catg_slider" style="height:200px">
+                        <div class="section-heading">
+                                <p>International Brands</p>
+                            </div>
+                    <div id="slides_control" class="footer_slider">
+                            <slick class="slider" settings="slickConfig3">
+                                <div ng-repeat="slide in footerbrands" ng-click="product_list(slide.category_id, slide.brand_name)">
+                                 
+                                        <img class="slide_image" ng-src="{{slide.image}}">
+                                    
+                                </div>
+                            </slick>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="loading-overlay" ng-if="loading_hit == '1'">
+            <div class="loading" style="z-index: 99999999;">
+                <img src="img/amari_loader-app.gif" style="margin: 0 auto;">
+            </div>
+        </div>
+
+        <!--  START Hot deals -->
+        <!--
+        <div class="container-fluid m-top animatedParent animateOnce">
+            <div class="row">
+                <div id="hot_deals">
+
+
+                    <div class="col-xs-12 no-padding mb-5 white-bg">
+                        <div class="col-xs-12 pl-5 pr-5 mb-5 offers_main" ng-repeat="offer in offers" ng-click="product_list(offer.offer_cat, offer.offer_name)">
+                            <div class="animated fadeInLeft slow">
+                                <a href="javascript:void(0);">
+                                    <div class="offer_img_cont">
+                                        <img src="{{offer.offer_image}}" alt="" class="img-responsive" />
+
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+-->
+        <!--  END  Hot deals -->
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function() {
+        $(".cart_icon a:last-child").click(function() {
+            $(".bottom_header").slideToggle();
+           
+            //$("javascript:void(0);banner_slider").toggleClass("search-container")
+        })
+    });
+
+    /* var im = document.getElementById('imageID'); // or select based on classes
+    im.onerror = function(){
+      // image not found or change src like this as default image:
+
+       im.src = 'assets/img/banner/banner_01.png';
+    }; */
+
+    /*  $(".sidenav").click(function(event){
+     event.preventDefault();
+     }); */
+
+</script>
+

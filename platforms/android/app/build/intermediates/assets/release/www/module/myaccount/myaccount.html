@@ -1,0 +1,112 @@
+<div class="bg" ng-controller="myaccount" ng-init="myprofile_data()">
+    <header class="container-fluid nav-down">
+        <div class="row">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid no-padding">
+                    <ul class="nav navbar-nav top_header">
+                        <li class="menu_icon back_icon"><a href="#"><img ng-click="back()" src="assets/img/header/back.png"
+                                    id="asdf" alt="menu icon" /></a></li>
+                        <li class="logo_name"><a class="text-left back">My Account</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+        <!-- MOBILE-MENU-AREA END -->
+    </header>
+
+    <!-- END HEADER -->
+
+
+    <div class="my_profile_div mt-50">
+        <ul class="profile_menu">
+            <li>
+                <a ng-click="dashboard()">
+                    <span class="profile_type">
+                        <img src="assets/img/dashboard.png">
+                        <p>Home</p>
+						<span class="chev_right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a ng-click="my_profile()">
+                    <span class="profile_type">
+                        <img src="assets/img/my_profile.png">
+                        <p>My Profile</p>
+						<span class="chev_right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                    </span>
+                </a>
+
+            </li>
+            
+            <li>
+                <a ng-click="my_orders()">
+                    <span class="profile_type">
+                        <img src="assets/img/my_order.png">
+                        <p>My Orders</p>
+						<span class="chev_right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                    </span>
+
+                </a>
+
+            </li>
+            <li>
+                <a ng-click="my_address()">
+                    <span class="profile_type">
+                        <img src="assets/img/my_address.png">
+                        <p>My Address</p>
+						<span class="chev_right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                    </span>
+
+                </a>
+
+            </li>
+            <li>
+                <a ng-click="change_password()">
+                    <span class="profile_type">
+                        <img src="assets/img/change_password.png">
+                        <p>Change Password</p>
+						<span class="chev_right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                    </span>
+
+                </a>
+
+            </li>
+            <li>
+                <a ng-click="mywallet()">
+                    <span class="profile_type">
+                        <img src="assets/img/icon/wallet_2.png">
+                        <p>My Wallet</p>
+						<span class="chev_right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                    </span>
+                </a>
+
+            </li>
+            <li>
+                <a ng-click="myrewards()">
+                    <span class="profile_type">
+                        <img src="assets/img/icon/wallet_2.png">
+                        <p>My Loyalty Points</p>
+						<span class="chev_right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                    </span>
+                </a>
+
+            </li>
+
+            <li>
+                <a ng-click="logout()">
+                    <span class="profile_type log_out">
+                        <img src="assets/img/log_out.png">
+                        <p>Logout</p>
+					</span>
+
+                </a>
+
+            </li>
+        </ul>
+    </div>
+
+
+</div>

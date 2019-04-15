@@ -1,0 +1,165 @@
+<div class="bg" ng-controller="advertiser_register" ng-init="advertise()">
+    <style>
+        .inputbox input {
+            font-size: 15px;
+        }
+
+        .selectbox-cus {
+            font-size: 15px;
+        }
+    </style>
+    <header>
+        <div class="content-block">
+            <div class="mob-display-cell header-left-section" ng-click="home()">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </div>
+            <div class="header-center-section">
+                <span>Register </span>
+            </div>
+            <div class="header-right-section"></div>
+
+        </div>
+    </header>
+
+    <div class="content-block">
+        <div class="col-100 center">
+            <div style="width:100%; float:left; height:80px;"></div>
+            <h1 class="title2">Create Your Advertizer Account</h1>
+            <!--/  -----------------------------User-registeration form --------------------------------       -->
+            <form method="post" name="advertiseform" class="form-label" novalidate>
+                <div class="row margintop30">
+
+                    <div class="col-100 inputbox">
+                        <input type="text" name="fname" ng-model="fname" maxlength="30" placeholder="FIRST NAME*" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                    </div>
+
+                    <div class="col-100 inputbox">
+                        <input type="text" name="lname" ng-model="lname" maxlength="30" placeholder="LAST NAME*" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                    </div>
+
+                    <div class="col-100 inputbox">
+                        <input type="text" name="cname" ng-model="cname" maxlength="30" placeholder="COMPANY NAME*" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                    </div>
+
+                    <div class="col-100 inputbox">
+                        <input type="email" name="email_id" ng-model="email_id" maxlength="30" placeholder="EMAIL*" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <div class="col-100 inputbox">
+                        <input type="text" name="address" ng-model="address" maxlength="30" placeholder="ADDRESS*" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                    </div>
+
+                    <div class="col-100 inputbox custom-selectbox">
+                        <select type="select" ng-model="country_id" ng-init="country_id" name="country_id" ng-change="getstate(country_id)" class=" selectbox-cus inpSelect selectok1"
+                            ng-class="{'active':enabled}" ng-click="enabled =enabled ?false:true" required>
+                            <option value="">SELECT COUNTRY*</option>
+                            <option value="{{x.id}}" ng-repeat="x in country"> {{x. printable_name}}</option>
+                        </select>
+                    </div>
+
+
+                    <div class="col-100 inputbox custom-selectbox">
+                        <select type="select" ng-model="state_id" ng-init="state_id" name="state_id" ng-change="getcitys(state_id)" class="selectbox-cus inpSelect selectok1"
+                            ng-class="{'active':enabled}" ng-click="enabled =enabled ?false:true" required>
+                            <option value="">SELECT STATE*</option>
+                            <option value="{{x.id}}" ng-repeat="x in state"> {{x.state_name}}</option>
+                        </select>
+                    </div>
+
+                    <div class="col-100 inputbox custom-selectbox">
+                        <select type="select" ng-model="city_id" ng-init="city_id" name="city_id" class="selectbox-cus inpSelect selectok1" ng-class="{'active':enabled}"
+                            ng-click="enabled =enabled ?false:true" required>
+                            <option value="">SELECT CITY*</option>
+                            <option value="{{x.id}}" ng-repeat="x in city"> {{x.city_name}}</option>
+                        </select>
+                    </div>
+                    <div class="col-100 inputbox custom-selectbox">
+                        <select type="select" ng-model="creditcard_type" ng-init="card_type()" name="creditcard_type" class=" selectbox-cus inpSelect selectok1"
+                            required>
+                            <option value="">SELECT CARD TYPE*</option>
+                            <option value="{{j.id}}" ng-repeat="j in credit_card_type"> {{j.card_name}}</option>
+                        </select>
+                    </div>
+
+                    <div class="col-100 inputbox">
+                        <input type="text" name="cnumber" class="numbersOnly" ng-model="cnumber" maxlength="19" placeholder="CARD NUMBER*" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                    </div>
+
+
+
+
+
+                    <div class="col-100 inputbox">
+
+                        <div class="col-md-6-row">
+                            <div class="col-md-6 custom-selectbox">
+                                <select ng-model="expmonth" name="expmonth" class="selectbox-cus inpSelect selectok1" ng-class="{'active':enabled}" ng-click="enabled =enabled ?false:true"
+                                    required>
+                                    <option disabled selected value=""> EXPIRY MONTH* </option>
+                                    <option ng-repeat="month in months" value="{{$index+1}}"> {{$index+1}}</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6 custom-selectbox">
+                                <select ng-model="expyear" name="expyear" class="selectbox-cus inpSelect selectok1" ng-options="year for year in years" ng-class="{'active':enabled}"
+                                    ng-click="enabled =enabled ?false:true" required>
+                                    <option disabled selected value="">EXPIRY YEAR*</option>
+
+                                </select>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-100 inputbox">
+                        <input type="password" name="cvvnum" class="numbersOnly" ng-model="cvvnum" maxlength="5" placeholder="CVV NUMBER*" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                    </div>
+
+                    <div class="col-100 inputbox">
+                        <input type="password" name="password" ng-model="password" maxlength="30" placeholder="PASSWORD*" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                    </div>
+
+                    <div class="col-100 inputbox">
+                        <input type="password" name="cpassword" ng-model="cpassword" maxlength="30" placeholder="CONFIRM PASSWORD*" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                    </div>
+
+
+                    <div class="col-100">
+                        <button class="button next" ng-click="advertise_form('advertiseform')">SUBMIT </button>
+
+
+                    </div>
+            </form>
+            <!-- -------------- End the register form here ---------------- -->
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+    jQuery('.numbersOnly').keyup(function () {
+        this.value = this.value.replace(/[^0-9\.]/g, '');
+    });
+</script>

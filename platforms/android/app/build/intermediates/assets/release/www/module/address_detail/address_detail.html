@@ -1,0 +1,77 @@
+<style>
+.nav > li.logo_name {
+    width: 60%;
+}
+
+</style>
+<div ng-controller="address_detail" ng-init="all_address()">
+    <header class="container-fluid nav-down">
+        <div class="row">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid no-padding">
+                    <ul class="nav navbar-nav top_header">
+                        <li class="menu_icon back_icon"><a href="javascript:void(0)"><img src="assets/img/header/back.png"
+                                    alt="menu icon" ng-click="toPaymentSummary()" /></a></li>
+                        <li class="logo_name"><a class="text-left back">Delivery Address</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+        <!-- MOBILE-MENU-AREA END -->
+    </header>
+
+    <!-- END HEADER -->
+
+    <!-- Add Address-->
+    <div class="address-delivery" ng-if="alladdress">
+        <h3>Saved Address</h3>
+    </div>
+	<div class="main_address_div">
+		<div class="saved_address pb-25" ng-click="toDeliveryTime(x.ad_id)" ng-repeat="x in alladdress" ng-if="alladdress">
+
+			<div class="delivery_add">
+				<h3>
+					<b style="color:black;" ng-if="x.title == 'other'">{{x.address_title | ucwords}}</b>
+					<b style="color:black;" ng-if="x.title != 'other'">{{x.title  | ucwords}}</b><br>
+					{{x.plot_no + ", " +x.locality}}<br />
+					{{x.landmark + " " + x.city}}<br />
+					{{x.state + " " + " " + x.pincode}}
+				</h3>
+				<!--- <a class="edit" ng-click="toEditAddress(x.ad_id)">Edit</a>
+				<a class="delete" style="margin-left:10px" ng-click="delete_address(x.ad_id)">Delete</a>
+				--->
+			</div>
+			<!-- {{x.address_status}} -->
+			<!--- <div class="checked_add" ng-if="x.address_status !== 'invalid'">
+
+				<a href="javascript:void(0)">
+					<div class="select_add" ng-click="toDeliveryTime(x.ad_id)">
+						<p>Select</p>
+					</div>
+
+				</a>
+			</div>  --->
+			<div class="checked_add" ng-if="x.address_status == 'invalid'">
+
+				<a href="javascript:void(0)" style="color:red">
+					<div class="cannot_deliver">
+						<p>This order cannot be Delivered here
+						</p>
+					</div>
+
+				</a>
+			</div>
+			
+			<div class="home-address">
+			    <p>Select</p>
+			</div>
+
+		</div>
+	</div>
+    <div class="no_data" ng-if="!alladdress">
+        <h5>No Address Found!!</h5>
+    </div>
+    <div class="chng_add add-new-address text-center"><a href="javascript:void(0)" ng-click="toAddAddress()">Change or Add Address</a></div>
+</div>

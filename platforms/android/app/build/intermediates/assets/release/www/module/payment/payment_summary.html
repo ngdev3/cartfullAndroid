@@ -1,0 +1,90 @@
+<div class="bg" ng-controller="payment_summary" ng-init="pay_summery()">
+<style>
+.nav > li.logo_name {
+    width: 85%;
+}
+</style>
+    <header class="container-fluid nav-down">
+        <div class="row">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid no-padding">
+                    <ul class="nav navbar-nav top_header">
+                        <li class="menu_icon back_icon"><a href="javascript:void(0)"><img src="assets/img/header/back.png"
+                                    alt="menu icon" ng-click="toCart()" /></a></li>
+                        <li class="logo_name"><a class="text-left back">Payment Summary</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+        <!-- MOBILE-MENU-AREA END -->
+    </header>
+
+    <!-- END HEADER -->
+    <div ng-if="!payment.error" style="overflow:hidden;">
+        <div class="scroll_cart">
+        <div class="total_item">
+            <h3>Total items:<span> {{shippingCartData.totalitems}}</span></h3>
+        </div>
+        <div class="price_details mt-30">
+            <div class="paymrnt_sum">
+                <h4>Payment Summary</h4>
+            </div>
+
+            <div class="sub_total">
+                <h3 class="ml-15 mr-10">Sub Total <span>Rs {{shippingCartData.cart_subtotal}}</span></h3>
+            </div>
+            <div class="total_savings" >
+					<h3>Total Savings <span>Rs {{shippingCartData.discount_amt}}</span></h3>
+            </div>
+            <div class="delivery_charge" ng-if="shippingCartData.shipping_charge != ''">
+                <h3 class="ml-15 mr-10">Shipping Charge<span>
+                        <span ng-if="shippingCartData.shipping_charge !== 'free'" style="float: none;">Rs</span>
+                        {{shippingCartData.shipping_charge | ucwords}}</span>
+                </h3>
+            </div>
+            <div class="delivery_charge" ng-if="shippingCartData.shipping_charge == ''">
+                <h3 class="ml-15 mr-10">Shipping Charge<span>
+                        <span style="float: none;">Rs</span>
+                        0.00</span>
+                </h3>
+            </div>
+            <form method="post" name="promo_form" novalidate>
+                <div class="coupon" style="white-space:nowrap;">
+                    <input type="text" id="inputpromo" name="form.coupon" ng-model="form.coupon"
+                        placeholder="Promo Code" autocomplete="off" ng-keyup="$event.keyCode == 13 && applyPromocode('promo_form')" required>
+                    <button id="apply" ng-mousedown="applyPromocode('promo_form');">Apply</button> <!--ng-click="applyPromocode('promo_form');"--> 
+                    <button id="applied" class="hide">Applied</button>
+                    <img class="hide" src="assets/img/pencil_coupon.jpg" ng-click="enablebutton()" width="22px" height="30px"
+                        alt="" id="promoEdit" style="float:right" />
+                </div>
+            </form>
+            
+        </div></div>
+        <div class="price_details fixed_checkout_payment">
+                <div class="total_saving" ng-if="couponData.discount_amt > 0">
+                        <h3 class="ml-15 mr-15">You will save<span class="save">Rs {{couponData.promodiscount}}</span></h3>
+                </div>
+                <div class="total">
+                    <h3 class="ml-15 mr-15" ng-if="!couponData"> Total <span>Rs {{shippingCartData.paymoney}}</span></h3>
+                    <h3 class="ml-15 mr-15" ng-if="couponData"> Total <span>Rs {{couponData.paymoney}}</span></h3>
+                </div>
+                
+                
+
+                <div class="sign-up-button checkout mb-10">
+                    <a href="javascript:void(0)" ng-click="toAddressDetail()">
+                        Place Order
+                        <img src="assets/img/checkout_arrow.png">
+                    </a>
+
+                </div>
+        </div>
+    
+    <div ng-if="payment.error" class="payment_error">
+        <h3>No Data</h3>
+    </div>
+	
+</div>
+

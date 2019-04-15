@@ -1,0 +1,296 @@
+<div ng-controller="home_products">
+<header class="container-fluid nav-down">
+	<div class="row">
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid no-padding">
+			<ul class="nav navbar-nav top_header">
+			  <li class="menu_icon back_icon"><a href="javascript:void(0);" ng-click="back()" ><img src="assets/img/header/back.png" id="asdf" alt="menu icon" /></a></li>
+			  <li class="logo_name"><a class="text-left back">{{cat_name}}</a></li>
+			  <li class="cart_icon mr-5">
+				  <a href="javascript:void(0);"><img src="assets/img/header/cart_icon.png" ng-click="opencart()" alt="cart icon" style="width: 16px;" /><span class="badge">{{activeCartValue}}</span></a>
+				  <!-- <a href="javascript:void(0);"><img src="assets/img/header/filter.png" alt="search icon"  onclick="openFilter()"/></a> -->
+			  </li>
+			</ul>
+		  </div>
+		</nav>
+	
+	</div>
+	<!-- MOBILE-MENU-AREA END -->
+</header>
+<!-- END HEADER -->
+<div id="mySidenav-right" class="sidenav-right">		
+	<header id="filter-header" class="container-fluid nav-down">
+		<div class="row">
+			<nav class="navbar navbar-inverse">
+			  <div class="container-fluid no-padding">
+				<ul class="nav navbar-nav top_header">
+				  <!-- <li class="menu_icon"><a href="#" ><img onclick="closeFilter()" src="assets/img/header/cross_icon.png" id="asdf" alt="menu icon" /></a></li>
+				  <li class="logo_name" style="width: 100%"><a class="text-center back">Filter</a></li> -->
+				  
+				</ul>
+			  </div>
+			</nav>
+		</div>
+	</header>
+	<div class="filter-body">
+		<div class="filter-container">
+			<button class="accordion">Categories</button>
+			<div class="accordion-panel">
+			  <div class="accordion-container">
+					<div class="accordion-options">
+						<div class="pretty p-icon p-curve p-pulse">
+							<input type="checkbox" name="">
+							<div class="state p-info-o">
+								<i class="icon fa fa-check"></i>
+								<label>Fresh Fruits</label>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-options">
+						<div class="pretty p-icon p-curve p-pulse">
+							<input type="checkbox" name="">
+							<div class="state p-info-o">
+								<i class="icon fa fa-check"></i>
+								<label> Fresh Vegetables</label>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-options">
+						<div class="pretty p-icon p-curve p-pulse">
+							<input type="checkbox" name="">
+							<div class="state p-info-o">
+								<i class="icon fa fa-check"></i>
+								<label> Grocery Items</label>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-options">
+						<div class="pretty p-icon p-curve p-pulse">
+							<input type="checkbox" name="">
+							<div class="state p-info-o">
+								<i class="icon fa fa-check"></i>
+								<label> Fresh Breads</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<button class="accordion">Brand</button>
+			<div class="accordion-panel">
+			  <div class="accordion-container">
+					<div class="accordion-options">
+						<div class="pretty p-icon p-curve p-pulse">
+							<input type="checkbox" name="">
+							<div class="state p-info-o">
+								<i class="icon fa fa-check"></i>
+								<label> BB Royal</label>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-options">
+						<div class="pretty p-icon p-curve p-pulse">
+							<input type="checkbox" name="">
+							<div class="state p-info-o">
+								<i class="icon fa fa-check"></i>
+								<label> BB Combo</label>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-options">
+						<div class="pretty p-icon p-curve p-pulse">
+							<input type="checkbox" name="">
+							<div class="state p-info-o">
+								<i class="icon fa fa-check"></i>
+								<label> orgran</label>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-options">
+						<div class="pretty p-icon p-curve p-pulse">
+							<input type="checkbox" name="">
+							<div class="state p-info-o">
+								<i class="icon fa fa-check"></i>
+								<label> Star Lion</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<button class="accordion">Price</button>
+			<div class="accordion-panel">
+			  <div class="accordion-container">
+					<div class="accordion-options">
+						<div class="pretty p-icon p-curve p-pulse">
+							<input type="checkbox" name="">
+							<div class="state p-info-o">
+								<i class="icon fa fa-check"></i>
+								<label> Less than rs 20</label>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-options">
+						<div class="pretty p-icon p-curve p-pulse">
+							<input type="checkbox" name="">
+							<div class="state p-info-o">
+								<i class="icon fa fa-check"></i>
+								<label> Rs 21 to Rs 50</label>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-options">
+						<div class="pretty p-icon p-curve p-pulse">
+							<input type="checkbox" name="">
+							<div class="state p-info-o">
+								<i class="icon fa fa-check"></i>
+								<label> Rs 51 to Rs 100</label>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-options">
+						<div class="pretty p-icon p-curve p-pulse">
+							<input type="checkbox" name="">
+							<div class="state p-info-o">
+								<i class="icon fa fa-check"></i>
+								<label> Rs 101 to Rs 200</label>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-options">
+						<div class="pretty p-icon p-curve p-pulse">
+							<input type="checkbox" name="">
+							<div class="state p-info-o">
+								<i class="icon fa fa-check"></i>
+								<label> Rs 201 to Rs 500</label>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-options">
+						<div class="pretty p-icon p-curve p-pulse">
+							<input type="checkbox" name="">
+							<div class="state p-info-o">
+								<i class="icon fa fa-check"></i>
+								<label> More than Rs 501</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<button class="accordion">Food Preference</button>
+			<div class="accordion-panel">
+			    <div class="accordion-container">
+					<div class="accordion-options">
+						<div class="pretty p-icon p-curve p-pulse">
+							<input type="checkbox" name="">
+							<div class="state p-info-o">
+								<i class="icon fa fa-check"></i>
+								<label> Vegetarian</label>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-options">
+						<div class="pretty p-icon p-curve p-pulse">
+							<input type="checkbox" name="">
+							<div class="state p-info-o">
+								<i class="icon fa fa-check"></i>
+								<label> Non-Vegetarian</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="apply_btn_container">
+			<button> Cancel</button>
+			<button> Apply</button>
+		</div>
+	</footer>
+</div>
+
+	
+<!--  START listing Section -->
+
+<div id="listing_section" class="container-fluid animatedParent animateOnce">
+	
+	<div class="row">
+		
+		<div class="col-sm-4 col-xs-6 pl-5 pr-5 animated fadeInLeft slow" ng-repeat="product in productlist" ng-if="productlist != ''">
+            <div class="product_container mt-10">
+                <div class="prod_img_container">
+                    <img src="{{product.pimage}}" alt="product image 1" class="img-responsive" ng-click="product_view(product.pid)" />
+				</div>
+				<div class="prod_img_container" ng-if="!product.pimage">
+					<img src="assets/img/category/product_placeholder1.png" alt="product image 1" class="img-responsive" ng-click="product_view(product.pid)" />
+				</div>
+                 <div class="prod_content">
+
+                    <h2 class="mb-15" ng-click="product_view(product.pid)">{{product.product_name}}</h2>
+                    
+                    <div class="product_wgt">
+                        <input type="hidden" name="product" ng-model="product.selectedOption.weight" ng-click="update($event)">
+                        <select ng-model="product.selectedOption.price" id="product_{{product.pid}}" name="product.selectedOption.price"
+                         ng-change="getvalueforOtherVarient(product.pid, $(this).val())" class="select_weight" ng-init=" product.selectedOption.p_price = product.weight_data[0].p_price; product.selectedOption.weight = product.weight_data[0].weight_id; product.selectedOption.price = (product.weight_data[0].discount !== 0) ? product.weight_data[0].s_price : product.weight_data[0].showable_price; product.selectedOption.added = product.weight_data[0].added; product.selectedOption.addedQnty = product.weight_data[0].addedQnty; product.selectedOption.stock_type = product.weight_data[0].stock_type; product.selectedOption.stock_value = product.weight_data[0].stock_value; ">
+                            <option ng-repeat="weight in product.weight_data" ng-selected="{{product.selectedOption.weight == weight.weight_id}}"
+                             ng-value="weight.discount !== 0 ? weight.s_price : weight.showable_price" data-weight_id="{{weight.weight_id}}"
+                             data-added="{{weight.added}}" data-addedQnty="{{weight.addedQnty}}" data-stock_value="{{weight.stock_value}}"
+                             data-stock_type="{{weight.stock_type}}" data-showable_price="{{weight.showable_price}}" data-product_id="{{product.pid}}">{{weight.p_weight}}
+                            </option>
+                        </select>
+
+                    </div>
+                    <p class="prod_price">
+                        Rs. {{product.selectedOption.price}}
+
+                    </p> 
+                     
+                    <div class="add_item_container" id="firstt_{{product.pid}}" data-attr="{{product.selectedOption.weight}}">
+
+                        <div class=" add_item_button" id="enableCart_{{product.selectedOption.weight}}" ng-show="product.weight_data[0].added != 'no'">
+                            <button class="less_item" data-weightid="{{product.selectedOption.weight}}" id="minus_{{product.selectedOption.weight}}"
+                             ng-click="minusToCart($event)">-</button>
+                            <input type="text" id="quantity_{{product.selectedOption.weight}}" value="{{product.weight_data[0].addedQnty}}"
+                             disabled="">
+                            <button class="add_item" data-weightid="{{product.selectedOption.weight}}" id="plus_{{product.selectedOption.weight}}"
+                             ng-click="plusToCart($event)">+</button>
+                        </div>
+
+                        <input type="hidden" value="{{currentval}}" name="cartcurrentquant">
+
+                        <div class="add_cart_button" id="addToCart_{{product.selectedOption.weight}}" ng-show="product.weight_data[0].added != 'yes' && product.stock_value != '0,'">
+                            <button class="addcart_button" data-weightid="{{product.selectedOption.weight}}" id="addCart_{{product.selectedOption.weight}}"
+                             ng-click="addToCart($event);">Add
+                                to cart</button>
+						</div>
+
+						<div class="add_cart_button" ng-if="product.stock_value == '0,'">
+							<button class="addcart_button" style="background: #51a900;">Out of Stock</button>
+						</div>
+
+                    </div>
+                </div>
+                <div class="prod_discount" ng-if="product.discount !== '0'">
+                    <div class="disc_badge">
+                        <span>{{product.discount}}%</span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    
+        <div ng-if="productlis == ''" class="no_data_found">
+            <div class="no_data_main">
+                <img src="img/no_data_found.png">
+                <p>SORRY</p>
+                <p>No Product Found</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+        
+</div>

@@ -1,0 +1,177 @@
+<style>
+.reward_code p {
+    font-size: 14px;
+}
+.redeem_div {
+    text-align: center;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+.redeem_div > .redeem_main {
+    padding: 10px 5px;
+    border: 1px solid #fff;
+    box-shadow: 0px 8px 10px 0px rgba(134, 130, 130, 0.5215686274509804);
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+.redeem_div > .redeem_main > .redeem_text {
+    margin-top: 10px;
+    color: #4f4f4f;
+    font-size: 16px;
+}
+.sign-up-button button {
+    width: 80%;
+    background-color: #a6ce39;
+    color: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.point_hist {
+    margin: 20px 0px 5px 0px;
+    box-shadow: 0px 5px 16px 0px #ccc;
+}
+.point_hist p {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #7e7b7b;
+    padding-left: 15px;
+}
+.redeem_table_div {
+    max-height: 223px;
+    min-height: auto;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.redeem_point h3{
+    color: #97c80f;
+    margin-top: 10px;
+    font-size: 18px;
+}
+.redeem_main > p{
+    font-size: 12px;
+}
+</style>
+<div ng-controller="rewards" ng-init="myrewards()">
+   
+    <header class="container-fluid nav-down">
+        <div class="row">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid no-padding">
+                    <ul class="nav navbar-nav top_header">
+                        <li class="menu_icon back_icon"><a href="javascript:void(0)" ng-click="back()"><img src="assets/img/header/back.png"
+                                    id="asdf" alt="menu icon" /></a></li>
+                        <li class="logo_name"><a class="text-left back">My Rewards</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+        <!-- MOBILE-MENU-AREA END -->
+    </header>
+
+    <!-- END HEADER -->
+    <div class="" id="max-limitorder">	
+        <div class="mt-70"> 
+             <div class="reward_code text-center">
+                 <p>Referral Code: 
+                     <span ng-if="referral_code != ''">{{referral_code}}</span>
+                     <span ng-if="referral_code == ''">---/---</span>
+                    </p>
+             </div>
+        </div>
+        
+        <div class="redeem_div">
+            <div class="redeem_main">
+                <h3 class="redeem_text">Redeem Your Points</h3>
+                
+                <div class="redeem_point">
+                    <h3 style="color:#006d07; margin-top:10px;"><span ng-if="loyality_points != ''">{{loyality_points}}</span> 
+                        <span ng-if="loyality_points == ''">0</span> Points</h3>
+                </div>
+                <p>Note : To redeem minimum point should be {{redeem_limit}}</p>
+            </div>
+        </div>
+        
+    
+        <div class="sign-up-button text-center">
+            <button ng-click="reddempoints()" class="" style="width: 50%;
+            box-shadow: 0px 3px 7px 0px rgba(166, 206, 57, 0.7215686274509804);">
+                Reedem Points
+            </button>
+        </div>
+        <!-- <div class="sign-up-button text-center redeem_btn" ng-if=" redeemdata.redeem_limit > redeemdata.loyalty_point_data">
+                <button ng-click="lesspoints()" class="" style="width:50%; background-color:#ca8b8b ">
+                    {{'Not_Enough_Points' | translate}}
+                </button>
+            </div> -->
+        <div class="point_hist">
+            <p class="pt-15">Your Points History</p>
+        </div>
+        <div class="transaction-wrap ng-scope" ng-repeat="x in loyalty_data">
+            <div class="ruppee-symbol"><img src="assets/img/ruppe-icon.png" alt=""></div>
+            <div class="add-by-card">
+                <!-- ngIf: x.payment_by == '1' -->
+                <!-- ngIf: x.payment_by == '2' -->
+                <!-- ngIf: x.payment_by == '3' -->
+                <!-- ngIf: x.payment_by == '4' --><p class="ng-scope">{{x.loyalty_by}}</p>
+                <!-- ngIf: x.payment_by == '5' -->
+                <date class="ng-binding">{{x.created_date}}</date>
+                
+            </div>
+            <div class="ruppee-aamount ng-binding">
+                <span class="ng-scope" ng-if="x.type == 'cr'">+</span>
+                <span class="ng-scope" ng-if="x.type == 'dr'">-</span> 
+                {{x.loyalty_point}}
+            </div>
+        </div>
+       <!--<div class="redeem_table_div">
+            <table class="table redeem_table">
+                <thead class="">
+                    <tr>
+                        <td scope="col">Date</td>
+                        <td scope="col">Description</td>
+                        <td scope="col">Amount</td>
+                        <td scope="col">CR/DR</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <th style="text-align:center;font-weight:400;">28-02-2019</th>
+                      
+                      <td >Order<br> Order ID AG1111111234</td>
+                      <td>100</td>
+                      <td>CR</td>
+                    </tr>
+                    <tr>
+                      <th style="text-align:center;font-weight:400;">12/12/2018</th>
+                      <td>paytm</td>
+                      <td>200</td>
+                      <td>larry</td>
+                    </tr>
+                    <tr>
+                      <th style="text-align:center;font-weight:400;">12/12/2018</th>
+                      <td>paytm</td>
+                      <td>200</td>
+                      <td>larry</td>
+                    </tr> 
+                    
+                </tbody>
+            </table>
+        </div>-->
+    </div>
+</div>
+    <script>
+    
+        $('.digit1 input').keyup(function(){
+            if($(this).val().length==$(this).attr("maxlength")){
+                $(this).next().focus();
+            }
+        });
+    
+    </script>	
