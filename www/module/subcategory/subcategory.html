@@ -17,10 +17,10 @@
                     </ul>
                     <ul class="nav navbar-nav bottom_header">
                         <li class="menu_search_container"><a href="javascript:void(0);">
-                                <img src="assets/img/header/search_icon.png" alt="cart icon" />
+                                <!-- <img src="assets/img/header/search_icon.png" alt="cart icon" /> -->
                                 <input type="text" ng-keyup="searchbar()" ng-model="search" class="menu_search"
                                     placeholder="Search products brands and more" />
-                                    <button class="search_bar_span" ng-click="searchtoproducts(search)"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                                <img src="img/loading21.gif" alt="" class="search_loader">
                             </a></li>
                     </ul>
                 <div id="main_div1">    
@@ -37,7 +37,7 @@
                                         > 35 ? '...' : ''}}</span></div>
                             </li>
                             <li class="search_list_li" ng-if="resultstatus">
-                                <div class="search_name" style="width: 100%; padding-left: 5px;display: block;text-align: center"><span>Typing</span>
+                                <div class="search_name" style="width: 100%; padding-left: 5px;display: block;text-align: center"><span>Type at least 3 characters.</span>
                                     <img src="img/loading21.gif" alt="" style="height: 6px;"></div>
                             </li>
                             <li class="search_list_li" ng-if="datanotfound">
@@ -61,7 +61,7 @@
 
     <div class="container-fluid mb-15 animatedParent animateOnce" id="category_list">
         <div class="row">
-            <div class="col-xs-4 pl-7 pr-7 mt-7 mb-7" ng-if="subcategory.length > 0" ng-repeat="x in subcategory"
+            <div class="col-xs-6 pl-5 pr-5 mt-5 mb-5" ng-if="subcategory.length > 0" ng-repeat="x in subcategory"
                 ng-click="product_list(x.id, x.name)">
                 <div class="animated fadeInLeft slow go">
                     <a href="javascript:void(0);">
