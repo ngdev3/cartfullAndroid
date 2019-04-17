@@ -139,6 +139,74 @@
 
 </style>
 
+<style>
+.wallet_div {
+    padding: 40px 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 12px 27px 7px #e6e6e6;
+    background-image: url(assets/img/wallet_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.wallet_logo {
+    width: auto;
+    text-align: right;
+    display: table-cell;
+    vertical-align: middle;
+}
+.wallet_details, .lp {
+    width: auto;
+    display: table-cell;
+    /* padding-top: 20px; */
+    padding-left: 10px;
+    /* margin-top: 20px; */
+}
+.wallet_details p {
+    font-size: 16px;
+    color: #51a900;
+    margin-bottom: 0px;
+}
+.wallet_details h4, .lp h4 {
+    font-size: 24px;
+    margin-top: 5px;
+    font-weight: 100;
+}
+.wallet_details a, .lp a {
+    font-size: 12px;
+    color: #51a900;
+    text-decoration: underline;
+}
+.button_add_pref {
+    background-image: linear-gradient(#cdffae, #7dda42);
+    border: none;
+    color: white;
+    padding: 0 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 25px;
+    font-weight: 700;
+    height: 40px;
+    width: 40px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 1px solid #d4d4d4;
+    transition: box-shadow ease-in-out 0.35s;
+    padding-bottom: 3px;
+
+}
+.add_money{
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+</style>
+
 <div class="bg" ng-controller="wallet" ng-init="my_wallet_data()">
 
     <header class="container-fluid nav-down">
@@ -167,22 +235,37 @@
 
 
 
-        <div class="wallet_bal">
+       <!--<div class="wallet_bal">
             <div class="bal_heading">
-                <!--<p><img src="assets/img/icon/wallet.png" /></p>-->
                 <p>My Wallet</p>
             </div>
             <div class="bal_amt">
-               <!--  <div class="add-cc-money" onclick="addMoney1()">+ Add Money</div> -->
                 <div class="bal_amt_wrapper">
                     <p><img src="assets/img/wallet-icon.png" alt="wallet"> Rs.
                         <Span>{{getdata.wallet_balance}}</Span>
-                        <!-- {{getdata.wallet_amount}}-->
                     </p>
                     <div class="current-balance">Current Balance</div>
                 </div>
             </div>
-        </div>
+        </div>-->
+		
+
+
+		
+		<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 wallet_div">
+		            <div class="wallet_logo">
+					    <img src="assets/img/wallet_icon.png">
+					</div>
+					<div class="wallet_details">
+					    <p>My Wallet Balance</p>
+						<h4>Rs.<strong> {{getdata.wallet_balance}}</strong></h4>
+						<a href="javascript:void(0)">Terms and Condition</a>
+					</div>
+					
+					
+					<!--<a href="#" class="add_money"><button class="button_add_pref button_add_pref_add wallet_btn">+</button></a>-->
+					
+				</div>
 
 
     <!--     <div class="wrap-money-all">
@@ -234,7 +317,7 @@
             </div>
        
         <div class="wallet-transaction-id">
-            <h3 class="trans-id">Wallet Transaction Id</h3>
+            <h3 class="trans-id">Wallet Transaction History</h3>
             <div class="add-by-cash" ng-if="wallet_history">
                 <div class="transaction-wrap" ng-repeat="x in wallet_history"  ng-if = "x.amount != '0.00'">
                     <div class="ruppee-symbol"><img src="assets/img/ruppe-icon.png" alt=""></div>

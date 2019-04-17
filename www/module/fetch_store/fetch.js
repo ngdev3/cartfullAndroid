@@ -96,12 +96,13 @@ app.controller('fetch', function ($scope, $http, $location, $cookieStore, $timeo
                 res = response;
                 //console.log(res); return; 
                 // alert($scope.pickup_location);return;  
-                
+             //   alert('1');
                 if($scope.pickup_location == addressinfo){
-                        // console.log("--------------"); 
+                        // console.log("--------------");
+                      //  alert('11'); 
                         $location.path("/dashboard/home");
                     }else{
-
+                      //  alert('111');
                         // console.log("aaaaaaaaaaaaaaaaaaaaaaa");return ;
                         if (res.data.status == 'pass') {
         

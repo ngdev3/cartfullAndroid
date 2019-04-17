@@ -1,0 +1,325 @@
+<style>
+    #slides_control > div{
+      height: auto;
+    }
+    img{
+      margin:auto;
+      width: auto;
+      height: auto;
+    }
+    #slides_control {
+     position:relative;
+      width: 100%;
+      
+    }
+    .carousel-control.right {
+    background-image:none !important;
+    color: #000 !important;
+    }
+    .carousel-control.left {
+    background-image:none !important;
+    color: #000 !important;
+    }
+    .carousel-indicators li
+    {
+        border:1px solid #000 !important;
+    }
+    .carousel-indicators
+    {
+        bottom: -5px !important;
+    }
+    .carousel-indicators .active
+    {
+    
+        margin-right: 6px;
+        background-color:#666;
+    }
+    .carousel-indicators li
+    {
+        margin-right: 6px;
+    }
+    /** Controls **/
+    .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+        right: 50%;
+        margin-right: -10px;
+        opacity: 0;
+    }
+    
+    .carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+        left: 50%;
+        margin-left: -10px;
+        opacity: 0;
+    }
+    
+    a.left.carousel-control
+    {
+        position: absolute;
+        top: 50%;
+        z-index: 5;
+        display: inline-block;
+        margin-top: -10px;
+    
+       
+        margin-left: -10px;
+    }
+    a.right.carousel-control
+    {
+        
+        margin-right: -10px;
+        position: absolute;
+        top: 50%;
+        z-index: 5;
+        display: inline-block;
+        margin-top: -10px;
+    }
+    #autocomplete {
+  width: 100%;
+}
+    /** ! controls **/
+    </style>
+<div class="bg" ng-controller="home" ng-init="list_category()" id="containernew">
+    <div style='display:none;' class="homes"></div>
+    <div id="mySidenav" class="sidenav" onclick="openNav()">
+        <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
+        <ul class="side_nav">
+            <li>
+                <a href="javascript:void(0)"><img src="assets/img/icon/location.png" alt="" ng-click="toLocationFetch()">
+                    <span>
+                        <input type="text" value="{{store_location}}" readonly ng-click="toLocationFetch()">
+                    </span>
+                </a>
+            </li>
+            <li><a href="javascript:void(0)"><img src="assets/img/icon/home.png" alt=""> <span ng-click="home()">Home</span></a></li>
+            <li><a href="javascript:void(0)"><img src="assets/img/icon/category.png" alt=""> <span ng-click="notification()">Notification</span></a></li>
+            <li><a href="javascript:void(0)"><img src="assets/img/icon/account.png" alt=""> <span ng-click="category()">All
+                        Categories</span></a></li>
+            <li><a href="javascript:void(0)"><img src="assets/img/icon/offer.png" alt=""> <span ng-click="useroffers()">Offers</span></a></li>
+            <li><a href="javascript:void(0)"><img src="assets/img/icon/hot_deals.png" alt=""> <span ng-click="hot_deals()">Hot Deals</span></a></li>
+            <li><a href="javascript:void(0)"><img src="assets/img/icon/about_us.png" alt=""> <span ng-click="about_us()">About Us</span></a></li>
+            <li><a href="javascript:void(0)"><img src="assets/img/icon/contact_us.png" alt=""> <span ng-click="Contact_us()">Contact Us</span></a></li>
+            <!--<li><a href="javascript:void(0)"><img src="assets/img/icon/login.png" alt=""> <span>Skin Care</span></a></li>
+            <li><a href="javascript:void(0)"><img src="assets/img/icon/login.png" alt=""> <span>Diapering</span></a></li> -->
+            <li><a href="javascript:void(0)"><img src="assets/img/icon/login.png" alt=""> <span ng-click="signout()">Logout</span></a></li>
+        </ul>
+    </div>
+    <div id="main" style="width: 100%;">
+        <header class="container-fluid nav-down">
+            <div class="row">
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid no-padding">
+                        <ul class="nav navbar-nav top_header">
+                            <li class="menu_icon "><a href="javascript:void(0);"><img onclick="openNav()" src="assets/img/header/ham_icon.png"
+                                        id="asdf" alt="menu icon" /></a></li>
+                            <li class="logo_name "><a href="javascript:void(0);" class="text-left ">
+                                    <span>
+                                        <!-- <input type="text" placeholder="Select Location..." id="address_bar" value="B-88 Sector 54, noida" /> -->
+                                        <input type="text" value="{{store_location}}" readonly ng-click="toLocationFetch()">
+                                    </span>
+                                    <img src="assets/img/header/pencil.png" alt="" id="pencil_icon" ng-click="toLocationFetch()" /></a>
+                            </li>
+                            <li class="cart_icon">
+                                <a href="javascript:void(0)"><img ng-click="my_account()" src="assets/img/header/user_icon.png"
+                                        alt="heart icon" /></a>
+                                <a href="javascript:void(0)"><img ng-click="opencart()" src="assets/img/header/cart_icon.png"
+                                        alt="cart icon" style="width: 15px;" /><span class="badge">{{activeCartValue}}</span></a>
+                                <a href="javascript:void(0);"><img src="assets/img/header/search_icon.png" alt="search icon" /></a>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav bottom_header">
+                            <li class="menu_search_container"><a href="javascript:void(0);">
+                                    <img src="assets/img/header/search_icon.png" alt="cart icon" />
+                                    <input type="text" ng-keyup="searchbar()" ng-model="search" class="menu_search"
+                                        placeholder="Search products brands and more" />
+
+
+                                </a>
+
+                            </li>
+                        </ul>
+                        <ul class="search_list">
+                            <li class="search_list_li" ng-repeat="x in searchresult" ng-click="product_view(x.pid)"
+                                ng-if="enableDiv">
+                                <div class="search_img">
+                                    <img src="{{x.pimage}}">
+                                </div>
+                                <div class="search_name"><span>{{x.product_name |limitTo : 35}}{{x.product_name.length
+                                        > 35 ? '...' : ''}}</span></div>
+                            </li>
+                            <li class="search_list_li" ng-if="resultstatus">
+                                <div class="search_name" style="width: 100%; padding-left: 5px;display: block;text-align: center"><span>Typing</span>
+                                    <img src="img/loading21.gif" alt="" style="height: 6px;"></div>
+                            </li>
+                            <li class="search_list_li" ng-if="datanotfound">
+                                <div class="search_name" style="    width: 100%;padding-left: 5px; display: block; text-align: center"><span>Not
+                                        Found </span><br>
+                                    <img src="img/notfoundemogi.gif" alt="" style="height: 25px;">
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+
+            </div>
+            <!-- MOBILE-MENU-AREA END -->
+        </header>
+        <!-- END HEADER -->
+
+        <!--  START Banner SLIDER -->
+        <div class="container-fluid">
+            <div class="row">
+                <div id="banner_slider">
+                    <!-- <div class="item">
+                    <div class="banner-img">
+                        <img src="assets/img/banner/banner_01.png" alt="banner 1" />
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="banner-img">
+                        <img src="assets/img/banner/banner_01.png" alt="banner 2" />
+                    </div>
+                </div>
+                <div class="item" ng-init="slider()">
+                    <div class="banner-img" ng-repeat="slide in slider">
+                        <img ng-src="{{slide.androidbanner}}+{{slide.image}}" alt="banner 3" />
+                    </div>
+                </div> -->
+                    <div id="slides_control" ng-init="slider()">
+                        <div>
+                            <carousel interval="myInterval">
+                                <slide ng-repeat="slide in slider" active="slide.active" ng-init=" image = '{{slide.androidbanner}}{{slide.image}}'">
+                                    <img ng-if="sliderCount != 0" ng-click="categorydetails(slide.category)" ng-src="{{slide.androidbanner}}{{slide.image}}">
+                                    <img ng-if="sliderCount == 0" ng-src="assets/img/banner/banner_01.png">
+                                    <!-- <div ng-if="!image">
+                                </div> -->
+                                    <!-- <div class="carousel-caption">
+                                        <h4>Slide {{sliderCount}}</h4>
+                                    </div> -->
+                                </slide>
+                                <a class="left carousel-control" ng-click="prev()" ng-show="slides.length > 1"><i class="fa fa-chevron-left"
+                                        aria-hidden="true"></i></a>
+                                <a class="right carousel-control" ng-click="next()" ng-show="slides.length > 1"><i
+                                        class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                            </carousel>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  END Banner SLIDER -->
+
+        <!--  START advertisement Section -->
+        <div class="container-fluid animatedParent animateOnce">
+            <div class="row">
+                <div id="adv_1">
+                    <a href="javascript:void(0);">
+                        <div class="category-img">
+                            <img src="assets/img/banner/advertise_01.png" alt="" class="animated fadeInDown slow" />
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--  END advertisement Section -->
+
+        <!--  START Category Section -->
+        <div class="container-fluid m-top animatedParent animateOnce">
+            <div class="row">
+                <div id="catg_slider">
+
+                    <div class="section-heading">
+                        <p>Categories</p>
+                    </div>
+                    <div class="section-heading-view">
+                        <a href="javascript:void(0);" ng-click="allCategory()">View all</a>
+                    </div>
+                    <div class="col-xs-12 pl-5 pr-5 mb-5 white-bg">
+
+                        <div class="col-xs-6 pl-5 pr-5 mt-5 mb-5" ng-repeat="category in categories | limitTo : 4"
+                            ng-click="subcategory(category.id)">
+                            <div class="animated fadeInLeft slow">
+                                <a href="javascript:void(0);">
+                                    <div class="offer-img">
+                                        <img src="{{category.image}}" alt="" class="img-responsive" />
+                                        <div class="catg_overlay text-center">
+                                            <p>{{category.name}}</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  END  Category Section -->
+
+        <!--  START Advertisement Section -->
+        <div class="container-fluid animatedParent animateOnce">
+            <div class="row">
+                <div id="adv_2" class="mb-5">
+                    <a href="javascript:void(0);">
+                        <div class="category-img">
+                            <img src="assets/img/banner/advertise_02.png" alt="" class="animated fadeInUp slow" />
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--  END Advertisement Section  -->
+
+        <!--  START Hot deals -->
+        <div class="container-fluid m-top animatedParent animateOnce">
+            <div class="row">
+                <div id="hot_deals">
+
+                    <div class="section-heading pt-0 mb-10">
+                        <p>Offers</p>
+                    </div>
+                    <div class="col-xs-12 pl-5 pr-5 mb-5 white-bg">
+                        <div class="col-xs-6 pl-5 pr-5 mt-5 mb-5" ng-repeat="offer in offers" ng-click="product_list(offer.offer_cat, offer.offer_name)">
+                            <div class="animated fadeInLeft slow">
+                                <a href="javascript:void(0);">
+                                    <div class="offer-img">
+                                        <img src="{{offer.offer_image}}" alt="" class="img-responsive" />
+                                        <div class="catg_overlay text-center">
+                                            <p>{{offer.offer_name}}</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  END  Hot deals -->
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $(".cart_icon a:last-child").click(function () {
+            $(".bottom_header").slideToggle();
+            //$("javascript:void(0);banner_slider").toggleClass("search-container")
+        })
+    });
+
+    /* var im = document.getElementById('imageID'); // or select based on classes
+    im.onerror = function(){
+      // image not found or change src like this as default image:
+
+       im.src = 'assets/img/banner/banner_01.png';
+    }; */
+
+    /*  $(".sidenav").click(function(event){
+     event.preventDefault();
+     }); */
+</script>

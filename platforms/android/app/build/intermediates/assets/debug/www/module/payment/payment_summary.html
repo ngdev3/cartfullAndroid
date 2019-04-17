@@ -50,19 +50,20 @@
                         0.00</span>
                 </h3>
             </div>
-            <form method="post" name="promo_form" novalidate>
-                <div class="coupon" style="white-space:nowrap;">
-                    <input type="text" id="inputpromo" name="form.coupon" ng-model="form.coupon"
-                        placeholder="Promo Code" autocomplete="off" ng-keyup="$event.keyCode == 13 && applyPromocode('promo_form')" required>
-                    <button id="apply" ng-mousedown="applyPromocode('promo_form');">Apply</button> <!--ng-click="applyPromocode('promo_form');"--> 
-                    <button id="applied" class="hide">Applied</button>
-                    <img class="hide" src="assets/img/pencil_coupon.jpg" ng-click="enablebutton()" width="22px" height="30px"
-                        alt="" id="promoEdit" style="float:right" />
-                </div>
-            </form>
+            
             
         </div></div>
         <div class="price_details fixed_checkout_payment">
+				<form method="post" name="promo_form" novalidate style="margin: 0;">
+					<div class="coupon" style="white-space:nowrap;">
+						<input type="text" id="inputpromo" name="form.coupon" ng-model="form.coupon"
+							placeholder="Promo Code" autocomplete="off" ng-keyup="$event.keyCode == 13 && applyPromocode('promo_form')" required>
+						<button id="apply" ng-mousedown="applyPromocode('promo_form');">Apply</button> <!--ng-click="applyPromocode('promo_form');"--> 
+						<button id="applied" class="hide">Applied</button>
+						<img class="hide" src="assets/img/pencil_coupon.jpg" ng-click="enablebutton()" width="22px" height="30px"
+							alt="" id="promoEdit" style="float:right" />
+					</div>
+				</form>
                 <div class="total_saving" ng-if="couponData.discount_amt > 0">
                         <h3 class="ml-15 mr-15">You will save<span class="save">Rs {{couponData.promodiscount}}</span></h3>
                 </div>

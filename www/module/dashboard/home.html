@@ -83,9 +83,9 @@
         <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
         <ul class="side_nav">
             <li>
-                <a href="javascript:void(0)"><img src="assets/img/icon/location.png" alt="" ng-click="toProfile()">
+                <a href="javascript:void(0)"><img src="{{fullname.image}}" alt="" ng-click="toProfile()">
                     <span>
-                        <input type="text" value="Hello, Sachin" readonly ng-click="toProfile()">
+                        <input type="text" value="Hello, {{fullname.username | ucwords}}" readonly ng-click="toProfile()">
                     </span>
                 </a>
             </li>
@@ -99,7 +99,10 @@
             <li><a href="javascript:void(0)"><img src="assets/img/icon/contact_us.png" alt=""> <span ng-click="Contact_us()">Contact Us</span></a></li>
             <!--<li><a href="javascript:void(0)"><img src="assets/img/icon/login.png" alt=""> <span>Skin Care</span></a></li>
             <li><a href="javascript:void(0)"><img src="assets/img/icon/login.png" alt=""> <span>Diapering</span></a></li> -->
-            <li><a href="javascript:void(0)"><img src="assets/img/icon/login.png" alt=""> <span ng-click="signout()">Logout</span></a></li>
+            <!-- <li><a href="javascript:void(0)"><img src="assets/img/icon/login.png" alt=""> <span ng-click="signout()">Logout</span></a></li> -->
+             <li ng-if="loggedin" ng-click="signout()"><a href="javascript:void(0)"><img src="assets/img/icon/login.png" alt=""> <span>Logout</span></a></li>
+            <li  ng-if="!loggedin" ng-click="signout()"><a href="javascript:void(0)"><img src="assets/img/icon/login.png" alt=""> <span>Login</span></a></li>
+     
         </ul>
     </div>
     <div id="main" style="width: 100%;">
@@ -130,7 +133,7 @@
                                     <!-- <img src="assets/img/header/search_icon.png" alt="cart icon" /> -->
                                     <input type="text" ng-keyup="searchbar()" ng-model="search" class="menu_search"
                                         placeholder="Search products brands and more" />
-									<img src="img/loading21.gif" alt="" class="search_loader">
+									<img ng-if="resultstatus" src="img/loading21.gif" alt="" class="search_loader">
 
                                 </a>
 

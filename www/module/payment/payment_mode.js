@@ -159,7 +159,8 @@ app.controller('payment_mode', function ($scope, $http, $location, $cookieStore,
                             
                             //$scope.onSubmit = function(){
                             //$scope.ref = window.open('http://projects.tekshapers.in/nss/payments/getRSA.php' + '?orderId=' + $scope.data.orderId + '&amount=' + $scope.data.amount,'_blank','location=no');
-                            $scope.ref = window.open('http://www.aamarigrocers.com/paynow/paytm_go_app' + '?order_id=' + $scope.ordercompleted.orderid + '&payamount=' + $scope.ordercompleted.orderamount +'&customer_id=' + $scope.user_id ,'_blank','location=no');
+                            $scope.ref = window.open('http://demo.cartfull.in/paynow/paytm_go_app' + '?order_id=' + $scope.ordercompleted.orderid + '&payamount=' + $scope.ordercompleted.orderamount +'&customer_id=' + $scope.user_id ,'_blank','location=no');
+                            // $scope.ref = window.open('http://www.aamarigrocers.com/paynow/paytm_go_app' + '?order_id=' + $scope.ordercompleted.orderid + '&payamount=' + $scope.ordercompleted.orderamount +'&customer_id=' + $scope.user_id ,'_blank','location=no');
                             $scope.ref.addEventListener('loadstart', function(event) {  });
                             $scope.ref.addEventListener('loadstop', function(event) {
                                setInterval($scope.getStateSecondWindow, 5000);

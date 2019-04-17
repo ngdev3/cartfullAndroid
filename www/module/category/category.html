@@ -18,7 +18,7 @@
 						<li class="menu_search_container"><a href="javascript:void(0);">
 								<!-- <img src="assets/img/header/search_icon.png" alt="cart icon" /> -->
 								<input type="text" ng-keyup="searchbar()" ng-model="search" class="menu_search" placeholder="Search products brands and more" />
-								<img src="img/loading21.gif" alt="" class="search_loader">
+								<img ng-if="resultstatus" src="img/loading21.gif" alt="" class="search_loader">
 							</a></li>
 					</ul>
 				<div id="main_div1">
@@ -34,7 +34,7 @@
 						</li>
 						<li class="search_list_li" ng-if="resultstatus">
 							<div class="search_name" style="width: 100%; padding-left: 5px;display: block;text-align: center"><span>Type at least 3 characters.</span>
-								<img src="img/loading21.gif" alt="" style="height: 6px;"></div>
+								<!-- <img src="img/loading21.gif" alt="" style="height: 6px;"></div> -->
 						</li>
 						<li class="search_list_li" ng-if="datanotfound">
 							<div class="search_name" style="    width: 100%;padding-left: 5px; display: block; text-align: center"><span>Not
