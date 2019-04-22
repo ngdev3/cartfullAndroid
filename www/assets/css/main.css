@@ -18,6 +18,10 @@
     font-family: Montserrat-Regular;
     src: url('../../assets/fonts/Montserrat-Regular.otf');
 }
+@font-face {
+    font-family: slick;
+    src: url('../../assets/fonts/slick.ttf');
+}
 
 
 
@@ -739,7 +743,10 @@ li.menu_search_container a input{
 
 /* Bof ---- home Section    */
 /* Bof ---- home Section    */
-#banner_slider{margin-top: 55px;}
+#banner_slider{margin-top: 27px;}
+.slick-slide img {
+  width: 100%;
+}
 .search-container{margin-top: 95px !important;}
 #banner_slider .banner-img{width: 100%;	}
 #banner_slider .banner-img img{width: 100%;}
@@ -1428,11 +1435,17 @@ li.menu_search_container a input{
 .search_loader{
     height: 9px;
     position: absolute !important;
-    right: 20px !important;
+    right: 40px !important;
     top: 16px !important;
     width: 45px !important;
     left: auto !important;
-
+}
+.go_search{
+	position: absolute;
+    top: 0;
+    right: 12px;
+    color: #7d7d7d;
+    padding: 13px;
 }
 .section-heading-view a {
     color: #bd2025;

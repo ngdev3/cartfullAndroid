@@ -23,6 +23,8 @@ app.controller('home', function ($scope, $http, $location, $cookieStore, $timeou
         }
     }
 
+    console.log($cookieStore.get('userinfo'))
+
 
     if (!$cookieStore.get('storeinfo')) {
         $location.path('/store');
@@ -184,7 +186,7 @@ app.controller('home', function ($scope, $http, $location, $cookieStore, $timeou
                 $scope.slickConfig2Loaded = true;
                 $scope.slickConfig2 = {
                   method: {},
-                  dots: false,
+                  dots: true,
                   infinite: false,
                   speed: 300,
                    autoplay:false,
@@ -402,16 +404,16 @@ app.controller('home', function ($scope, $http, $location, $cookieStore, $timeou
             res = response;
 
             if (res.data.response == 'success') {
-                console.log(res.data.data)
-                $scope.slider = res.data.data;
+              $scope.slider = res.data.data;
+              console.info(res.data.data)
 
                 $scope.slickConfig1Loaded = true;
                 $scope.slickConfig1 = {
                   method: {},
-                  dots: false,
+                  dots: true,
                   infinite: true,
                   speed: 500,
-                   autoplay:true,
+                   autoplay:false,
                    autoplaySpeed:5000,
                    arrows:false,
                   slidesToShow: 1,
@@ -422,7 +424,7 @@ app.controller('home', function ($scope, $http, $location, $cookieStore, $timeou
                       settings: {
                         slidesToShow: 1,
                         infinite: true,
-                        dots: false,
+                        dots: true,
                       }
                     },
                     {
@@ -449,7 +451,8 @@ app.controller('home', function ($scope, $http, $location, $cookieStore, $timeou
 
 
                 $scope.sliderCount = res.data.count;
-                console.log($scope.slider)
+                // alert($scope.sliderCount)
+                // console.log($scope.slider)
                 $location.path('/dashboard/home');
             } else {
 

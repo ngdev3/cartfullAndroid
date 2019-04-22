@@ -238,7 +238,7 @@ app.controller('login', function ($scope, $http, $location, $cookieStore, model,
 
                 }).then(function (response) {
                     console.log("---------------");
-                    console.log(response);
+                    console.log(response.data);
 
                     if (!response.data.error) {
 
