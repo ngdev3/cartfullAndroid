@@ -827,7 +827,7 @@ $rootScope.Filtering = function (id) {
             var storeid = '';
         }
 
-        loading.active()
+       // loading.active()
         var args = $.param({
             uid: user_id,
             mid: uuid,

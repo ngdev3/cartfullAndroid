@@ -15,11 +15,11 @@ app.controller('home', function ($scope, $http, $location, $cookieStore, $timeou
         var uid = $cookieStore.get('userinfo').uid;
         $scope.username = $cookieStore.get('userinfo').username;
         if($cookieStore.get('userinfo').image == Profile_path){
-            $scope.image = '';
+            $scope.imagesss = '';
         }else{
             console.log($cookieStore.get('userinfo').image)
             console.log(Profile_path)
-            $scope.image = $cookieStore.get('userinfo').image;
+            $scope.imagesss = $cookieStore.get('userinfo').image;
         }
     }
 

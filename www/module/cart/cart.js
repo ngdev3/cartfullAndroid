@@ -154,4 +154,20 @@ app.controller('cart', function ($rootScope, $scope, $http, $location, $interval
         })
 
     }
+
+    $scope.empty_cart_check = function () {
+        $.confirm({
+            title:"Confirmation",
+            buttons: {
+                OK: function(){
+                    $scope.empty_cart()
+                }
+                ,
+                cancel: function () {
+
+                }
+            }
+        })
+    }
+    
 });
